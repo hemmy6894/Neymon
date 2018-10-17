@@ -1,0 +1,114 @@
+<link href="<?php echo base_url(); ?>media/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>media/css/choosen/chosen.css" rel="stylesheet">
+<?php echo form_open_multipart(current_lang() . "/supplier/spendmoney_purchase_invoice/".$quoteid, 'class="form-horizontal"'); ?>
+
+<?php
+if (isset($message) && !empty($message)) {
+    echo '<div class="label label-info displaymessage">' . $message . '</div>';
+} else if ($this->session->flashdata('message') != '') {
+    echo '<div class="label label-info displaymessage">' . $this->session->flashdata('message') . '</div>';
+} else if (isset($warning) && !empty($warning)) {
+    echo '<div class="label label-danger displaymessage">' . $warning . '</div>';
+} else if ($this->session->flashdata('warning') != '') {
+    echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
+}
+  $customer_info = $this->supplier_model->supplier_info(null, $transaction->supplierid)->row();
+?>
+
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo 'Supplier Name'; ?>  : </label>
+
+    <div class="col-lg-6">
+        <input type="text" disabled="disabled" value="<?php echo $customer_info->name .' - '.$transaction->supplierid; ?>"  class="form-control "/> 
+
+    </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('invoice_total'); ?>  : </label>
+
+    <div class="col-lg-6">
+        <input type="text" disabled="disabled" value="<?php echo ($transaction->totalamount + $transaction->totalamounttax) ?>"  class="form-control amountformat"/> 
+
+    </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('invoice_advance'); ?>  : </label>
+
+    <div class="col-lg-6">
+        <input type="text" disabled="disabled" value="<?php echo ($transaction->totalamount + $transaction->totalamounttax - $transaction->balance) ?>"  class="form-control amountformat"/> 
+
+    </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('invoice_amountdue'); ?>  : </label>
+
+    <div class="col-lg-6">
+        <input type="text" disabled="disabled" value="<?php echo ($transaction->balance) ?>"  class="form-control amountformat"/> 
+
+    </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo 'Pay From'; ?> : <span class="required">*</span></label>
+
+    <div class="col-lg-6">
+      
+        <select name="received_account" class="form-control">
+            <option value=""><?php echo lang('select_default_text'); ?></option>
+            <?php
+            $selected = set_value('received_account');
+            foreach ($account_list2['toplevel'] as $key => $value) {
+                foreach ($account_list2['sublevel'][$key] as $key_sub => $value_sub) {
+                ?>
+            <optgroup style="padding-left: 10px;" label="<?php echo $value->name.' - '.$value_sub->name; ?>">
+                    <?php foreach ($account_list2['account_list'][$key][$key_sub] as $key1 => $value1) { ?>
+                        <option <?php echo ($value1->account == $selected ? 'selected="selected"' : ''); ?> value="<?php echo $value1->account; ?>"><?php echo $value1->name; ?></option>
+                    <?php } ?>
+                </optgroup>
+
+            <?php }} ?>
+        </select>
+        <?php echo form_error('received_account'); ?>
+        
+    </div>
+</div>
+
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo 'Paid Date'; ?>  : <span class="required">*</span></label>
+
+    <div class="col-lg-6">
+        <div class="input-group date" id="datetimepicker">
+            <input type="text" name="paydate" placeholder="<?php echo lang('hint_date'); ?>" value="<?php echo set_value('paydate'); ?>"  data-date-format="DD-MM-YYYY" class="form-control"/> 
+            <span class="input-group-addon">
+                <span class="fa fa-calendar "></span>
+            </span>
+        </div>
+
+        <?php echo form_error('paydate'); ?>
+    </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('amount'); ?>  : <span class="required">*</span></label>
+
+    <div class="col-lg-6">
+        <input type="text" name="amount" value="<?php echo set_value('amount'); ?>"  class="form-control amountformat"/> 
+<?php echo form_error('amount'); ?>
+    </div>
+</div>
+
+
+
+
+<div class="form-group">
+    <label class="col-lg-3 control-label">&nbsp;</label>
+    <div class="col-lg-6">
+        <input class="btn btn-primary" value="<?php echo lang('customer_addbtn'); ?>" type="submit"/>
+    </div>
+</div>
+
+
+<?php echo form_close(); ?>
+
+<script src="<?php echo base_url() ?>media/js/script/moment.js"></script>
+<script src="<?php echo base_url() ?>media/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+    $(function() {
+
+        $('#datetimepicker').datetimepicker({
+            pickTime: false
+        });
+
+    });
+</script>
