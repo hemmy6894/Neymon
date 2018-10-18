@@ -61,7 +61,7 @@ class Member extends CI_Controller {
      *  Description : File extension
      *  @parm filename
      *  @return file extension in lower case
-     * 
+     *
      */
 
     function getExtension($str) {
@@ -75,7 +75,7 @@ class Member extends CI_Controller {
     }
 
     function index() {
-        
+
     }
 
     function deactivate($id) {
@@ -154,22 +154,22 @@ class Member extends CI_Controller {
         $this->data['content'] = 'member/member_grouplist';
         $this->load->view('template', $this->data);
     }
-	
+
 	function view_mamber() {
         $this->data['content'] = 'member/view_member';
         $this->load->view('template', $this->data);
     }
-	
+
 	function view_mamber_loan() {
         $this->data['content'] = 'member/view_member';
         $this->load->view('template', $this->data);
     }
-	
+
 	function view_all() {
         $this->data['content'] = 'member/view_all';
         $this->load->view('template', $this->data);
     }
-	
+
 	function view_all_download() {
         $this->data['content'] = 'member/view_all';
         $this->load->view('member/view_all_download');
@@ -184,20 +184,20 @@ class Member extends CI_Controller {
         $this->form_validation->set_rules('category', lang('member_category'), 'required');
         $this->form_validation->set_rules('fee', lang('member_registration_fee'), 'numeric');
         $this->form_validation->set_rules('memberid', lang('member_member_id'), 'required');
-    if($this->input->post('category') =='Individual'){    
+    if($this->input->post('category') =='Individual'){
         $this->form_validation->set_rules('firstname', lang('member_firstname'), 'required|alpha');
         $this->form_validation->set_rules('middlename', lang('member_middlename'), 'alpha');
         $this->form_validation->set_rules('lastname', lang('member_lastname'), 'required|alpha');
         $this->form_validation->set_rules('gender', lang('member_gender'), 'required|alpha');
         $this->form_validation->set_rules('maritalstatus', lang('member_maritalstatus'), 'required');
         $this->form_validation->set_rules('dob', lang('member_dob'), 'required|valid_date');
-        
-    } else if($this->input->post('category') =='Company'){ 
+
+    } else if($this->input->post('category') =='Company'){
      $this->form_validation->set_rules('companyname', lang('companyname'), 'required');
      $this->form_validation->set_rules('type_id_tin', lang('member_type_id_tin'), 'required');
      $this->form_validation->set_rules('certificate_of_incorpation', lang('certificate_of_incorpation'), 'required');
      $this->form_validation->set_rules('doi', lang('member_doi'), 'required|valid_date');
-    
+
     }
         $this->form_validation->set_rules('joindate', lang('member_join_date'), 'required|valid_date');
 
@@ -227,11 +227,11 @@ class Member extends CI_Controller {
                 //check if member id exist
 
                 if (!$this->member_model->is_member_exist($member_id)) {
-                    
-                    
+
+
                     //add new member
-                if($this->input->post('category') =='Individual'){  
-                    
+                if($this->input->post('category') =='Individual'){
+
                     $new_member = array(
                         'member_id' => $member_id,
                         'firstname' => trim($this->input->post('firstname')),
@@ -247,7 +247,7 @@ class Member extends CI_Controller {
                         'PIN' => current_user()->PIN
                     );
                 }else if($this->input->post('category') =='Company'){
-                  
+
                     $new_member = array(
                         'member_id' => $member_id,
                         'firstname' => trim($this->input->post('companyname')),
@@ -260,27 +260,27 @@ class Member extends CI_Controller {
                         'createdby' => $this->session->userdata('user_id'),
                         'PIN' => current_user()->PIN
                     );
-                    
-                } 
-                    
+
+                }
+
                      $new_member['category'] = $this->input->post('category');
-                    
+
                     if ($file_name <> '') {
                         $new_member['photo'] = $file_name;
                     }
                     $registrationfee = trim($this->input->post('fee'));
                     $return = $this->member_model->add_member($new_member, $registrationfee);
-                    
+
                     if ($return) {
 
                         $username = $member_id;
                         $email = $member_id;
                         $password = alphaID($return, FALSE, 4);
-                        
-                        
+
+
 
                         // create account for login
-                       if($this->input->post('category') =='Individual'){ 
+                       if($this->input->post('category') =='Individual'){
                         $additional_data = array(
                             'first_name' => $new_member['firstname'],
                             'last_name' => $new_member['lastname'],
@@ -292,19 +292,19 @@ class Member extends CI_Controller {
                         );
                        }else if($this->input->post('category') =='Company'){
                          $additional_data = array(
-                            'first_name' => $new_member['firstname'],                            
+                            'first_name' => $new_member['firstname'],
                             'member_id' => $member_id,
                             'oldpass' => $password,
                             'MID' => $return,
                             'PIN' => current_user()->PIN,
                             'company' => company_info()->name,
-                        );  
+                        );
                        }
-                       
+
 
                         $this->ion_auth->register($username, $password, $email, $additional_data, array(3));
 
-                      
+
 
                         $this->session->set_flashdata('message', lang('member_create_success'));
                         redirect(current_lang() . '/member/memberinfo/' . encode_id($return), 'refresh');
@@ -312,7 +312,7 @@ class Member extends CI_Controller {
                         $this->data['warning'] = lang('member_create_fail');
                     }
                 } else {
-                    
+
                     $this->data['warning'] = lang('member_exist');
                 }
             } else {
@@ -341,8 +341,8 @@ class Member extends CI_Controller {
         $this->form_validation->set_rules('gender', lang('member_gender'), 'required|alpha');
         $this->form_validation->set_rules('maritalstatus', lang('member_maritalstatus'), 'required');
         $this->form_validation->set_rules('dob', lang('member_dob'), 'required|valid_date');
-    }else if($this->input->post('category') =='Company'){ 
-     $this->form_validation->set_rules('companyname', lang('companyname'), 'required');          
+    }else if($this->input->post('category') =='Company'){
+     $this->form_validation->set_rules('companyname', lang('companyname'), 'required');
     }
         $this->form_validation->set_rules('joindate', lang('member_join_date'), 'required|valid_date');
 
@@ -367,7 +367,7 @@ class Member extends CI_Controller {
 
         if ($this->form_validation->run() == TRUE & $upload_photo == TRUE) {
             //edit member info
-          if($this->input->post('category') =='Individual'){  
+          if($this->input->post('category') =='Individual'){
             $edit_member = array(
                 'firstname' => trim($this->input->post('firstname')),
                 'middlename' => trim($this->input->post('middlename')),
@@ -379,10 +379,10 @@ class Member extends CI_Controller {
                 'type_id_number' => trim($this->input->post('type_id_number')),
                 'joiningdate' => format_date(trim($this->input->post('joindate'))),
             );
-            
+
           }else if($this->input->post('category') =='Company'){
                   $edit_member = array(
-                'firstname' => trim($this->input->post('companyname')), 
+                'firstname' => trim($this->input->post('companyname')),
                 'TIN' => trim($this->input->post('type_id_tin')),
                 'incorporation_certificate' => trim($this->input->post('certificate_of_incorpation')),
                 'type_id' => trim($this->input->post('type_id')),
@@ -390,10 +390,10 @@ class Member extends CI_Controller {
                 'dob' => format_date(trim($this->input->post('doi'))),
                 'joiningdate' => format_date(trim($this->input->post('joindate'))),
             );
-                    
-                } 
-          
-          
+
+                }
+
+
 
             if ($file_name <> '') {
                 $edit_member['photo'] = $file_name;
@@ -428,11 +428,11 @@ class Member extends CI_Controller {
         }
         $this->form_validation->set_rules('pre_phone1', '', 'required');
         $this->form_validation->set_rules('pre_phone2', '', 'required');
-        if($this->data['basicinfo']->category == "Company"){ 
+        if($this->data['basicinfo']->category == "Company"){
         $this->form_validation->set_rules('phone1', lang('member_contact_phone3'), 'required|numeric|valid_phone');
         } else {
          $this->form_validation->set_rules('phone1', lang('member_contact_phone1'), 'required|numeric|valid_phone');
-        
+
         }
         $this->form_validation->set_rules('phone2', lang('member_contact_phone2'), 'numeric|valid_phone');
         $this->form_validation->set_rules('email', lang('member_contact_email'), 'valid_email');
@@ -519,8 +519,8 @@ class Member extends CI_Controller {
         $this->data['content'] = 'member/nextkininfo';
         $this->load->view('template', $this->data);
     }
-    
-    
+
+
     function memberbusiness($id) {
 
         $id = decode_id($id);
