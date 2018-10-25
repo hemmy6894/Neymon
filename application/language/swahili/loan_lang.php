@@ -6,17 +6,17 @@
  * and open the template in the editor.
  */
 
-$lang['loan_create_new'] = 'Create New Loan';
-$lang['loan_basic_info'] = 'Loan Basic Informations';
-$lang['loan_product'] = 'Loan Product';
-$lang['loan_applicationdate'] = 'Application Date';
-$lang['loan_applied_amount'] = 'Base Amount';
-$lang['requested_amount'] = 'Loan Applied';
-$lang['loan_installment'] = 'Installment No.';
-$lang['loan_paysource'] = 'Means Of Payment';
-$lang['loan_purpose'] = 'Description';
-$lang['loan_addbtn'] = 'Create Loan';
-$lang['loan_LID'] = 'Loan Number';
+$lang['loan_create_new'] = 'Temgeza Mkopo Mpya';
+$lang['loan_basic_info'] = 'Maelezo Msingi ya mkopo';
+$lang['loan_product'] = 'Bidhaa Mkopo';
+$lang['loan_applicationdate'] = 'Siku ya maombi';
+$lang['loan_applied_amount'] = 'Kiasi Msingi';
+$lang['requested_amount'] = 'Kiasi Ombwa';
+$lang['loan_installment'] = 'Marejesho';
+$lang['loan_paysource'] = 'Njia ya malipo';
+$lang['loan_purpose'] = 'Maelezo';
+$lang['loan_addbtn'] = 'Tengeza mkopo';
+$lang['loan_LID'] = 'Nambari ya mkopo';
 
 //loan validation
 $lang['loan_share_insufficient'] = 'Insufficient share';

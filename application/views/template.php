@@ -41,6 +41,15 @@
     <!-- ChartJS -->
     <script src="<?php echo base_url(); ?>media/js/plugins/chartJs/Chart.min.js"></script>
     <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+	
+	<script type="text/javascript" src="<?php echo base_url(); ?>media/js/jquery.autocomplete.js" ></script>
+	<link href="<?php echo base_url(); ?>media/css/select/select2.min.css" rel="stylesheet">
+	<link href="<?php echo base_url(); ?>media/css/jquery.autocomplete.css" rel="stylesheet">
+	<link href="<?php echo base_url(); ?>media/css/plugins/datapicker/datepicker3.css" rel="stylesheet"/>
+		
+	<script src="<?php echo base_url() ?>media/js/script/moment.js"></script>
+	<script src="<?php echo base_url() ?>media/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+	<script src="<?php echo base_url() ?>media/js/plugins/select/select2.full.js"></script>
     <style type="text/css">
         div#member_info img{
             height: 50px;

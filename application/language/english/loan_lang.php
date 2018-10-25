@@ -8,9 +8,11 @@
 
 $lang['loan_create_new'] = 'Create New Loan';
 $lang['loan_basic_info'] = 'Loan Basic Informations';
+$lang['loan_basic_info2'] = 'Borrower Basic Informations';
 $lang['loan_product'] = 'Loan Product';
 $lang['loan_applicationdate'] = 'Application Date';
-$lang['loan_applied_amount'] = 'Allocated Amount’';
+$lang['loan_applied_amount'] = 'Allocated Amount';
+$lang['amount_by_word'] = 'Amount By Word';
 $lang['requested_amount'] = 'Loan Applied';
 $lang['loan_installment'] = 'Installment No.';
 $lang['loan_paysource'] = 'Means Of Payment';
