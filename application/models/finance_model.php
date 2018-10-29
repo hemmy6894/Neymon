@@ -69,8 +69,8 @@ class Finance_Model extends CI_Model {
         return $this->db->get('saving_account_type');
     }
 
-    function last_chart_account($pin, $accounttype, $sub_account) {
-        $this->db->where('PIN', $pin);
+    function last_chart_account($accounttype, $sub_account) {
+       // $this->db->where('PIN', $pin);
         $this->db->where('accounttype', $accounttype);
         $this->db->where('sub_account', $sub_account);
         return $this->db->get('account_inc')->row();
@@ -78,29 +78,39 @@ class Finance_Model extends CI_Model {
 
     function create_chart_account($data) {
 
-        $pin = $data['PIN'];
-        $accounttype = $data['account_type'];
-        $sub_account = $data['sub_account_type'];
-
-        $last_account = $this->last_chart_account($pin, $accounttype, $sub_account);
+       // $pin = $data['PIN'];
+        // $date = $data['account_date'];
+        // $accountnumber = $data['account_number'];
+        // $accounttype = $data['account_type'];
+        // $sub_account = $data['sub_account_type'];
+        // $accountamount = $data['account_amount'];
+        // $description = $data['description'];
+        // $name = $data['name'];
+        //$last_account = $this->last_chart_account( $accounttype, $sub_account);
 
         // increment last account by 1
-        $this->db->where('PIN', $pin);
-        $this->db->where('accounttype', $accounttype);
-        $this->db->where('sub_account', $sub_account);
-        $this->db->set('last_account', "last_account+1", FALSE);
-        $this->db->update('account_inc');
+       // $this->db->where('PIN', $pin);
 
-        $account_start = (string) $last_account->accounttype . $last_account->sub_account;
-        $last_part = format_lastpart_account($last_account->last_account);
-        $account_no = $account_start . $last_part;
+        //$this->db->where('account_date', $date);
+        //$this->db->where('account_number', $accountnumber);
+        //$this->db->where('account_type', $accounttype);
+       // $this->db->where('sub_account_type', $sub_account);
+        //$this->db->where('account_amount', $accountamount);
+       // $this->db->where('description', $description);
+       // $this->db->where('name', $name);
+       // $this->db->set('last_account', "last_account+1", FALSE);
+       return $this->db->insert('account_finacial_statement',$data);
 
-        $data['account'] = (int) $account_no;
+       // $account_start = (string) $last_account->accounttype . $last_account->sub_account;
+       // $last_part = format_lastpart_account($last_account->last_account);
+       // $account_no = $account_start . $last_part;
+
+       // $data['account'] = (int) $account_no;
 
 
-        $this->db->insert('account_chart', $data);
+       // $this->db->insert('account_chart', $data);
 
-        return $account_no;
+       // return $account_no;
     }
 
     function edit_chart_account($create_account, $id) {
@@ -122,7 +132,7 @@ class Finance_Model extends CI_Model {
             $this->db->where('account', $account_type);
         }
 
-        return $this->db->get('account_type');
+        return $this->db->get('account_finacial_statement');
     }
 
     function account_chart_hiarchy($account_type = array(), $equity = true, $except_account = null) {
@@ -190,29 +200,44 @@ class Finance_Model extends CI_Model {
         return $return;
     }
 
-    function account_chart($id = null, $account = null, $account_type = null, $parent_account = null, $sub_account_type = null) {
-        $this->db->where('PIN', current_user()->PIN);
+    function account_chart($id = null, $account_date = null, $account_number = null, $account_type = null, $sub_account_type = null, $account_amount = null, $description = null, $name = null) {
+        //$this->db->where('PIN', current_user()->PIN);
         if (!is_null($id)) {
             $this->db->where('id', $id);
         }
 
-        if (!is_null($account)) {
-            $this->db->where('account', $account);
+        if (!is_null($account_date)) {
+            $this->db->where('account_date', $account_date);
         }
+
+        if (!is_null($account_number)) {
+            $this->db->where('account_number', $account_number);
+        }
+
         if (!is_null($account_type)) {
             $this->db->where('account_type', $account_type);
         }
-        if (!is_null($parent_account)) {
-            $this->db->where('account_parent', $parent_account);
-        }
+
         if (!is_null($sub_account_type)) {
             $this->db->where('sub_account_type', $sub_account_type);
         }
 
+        if (!is_null($account_amount)) {
+            $this->db->where('account_amount', $account_amount);
+        }
+
+        if (!is_null($description)) {
+            $this->db->where('description', $description);
+        }
+
+        if (!is_null($name)) {
+            $this->db->where('name', $name);
+        }
+
         $this->db->order_by('account_type', 'ASC');
         $this->db->order_by('sub_account_type', 'ASC');
-        $this->db->order_by('account', 'ASC');
-        return $this->db->get('account_chart');
+        //$this->db->order_by('account', 'ASC');
+        return $this->db->get('account_finacial_statement');
     }
     
      function account_chart_except($id = null, $account = null, $account_type = null, $parent_account = null, $sub_account_type = null) {

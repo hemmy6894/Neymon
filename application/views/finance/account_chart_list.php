@@ -6,11 +6,13 @@
         <thead>
             <tr>
                 <th style="width:80px;"><?php echo lang('sno'); ?></th>
-                <th><?php echo lang('account_no'); ?></th>
+                <th><?php echo lang('finance_account_date'); ?></th>
+                <th><?php echo lang('finance_account_number'); ?></th>
                 <th><?php echo lang('finance_account_type'); ?></th>
                 <th><?php echo 'Sub Account'; ?></th>
-                <th><?php echo lang('finance_account_name'); ?></th>
+                <th><?php echo lang('finance_account_amount'); ?></th>
                <th><?php echo lang('finance_account_description'); ?></th>
+               <th><?php echo lang('finance_account_name2'); ?></th>
                 <th><?php echo lang('actioncolumn'); ?></th>
             </tr>
         </thead>
@@ -22,7 +24,8 @@
                     ?>
                     <tr>
                         <td><?php echo $i++; ?></td>
-                        <td><?php echo $value->account ?></td>
+                        <td><?php echo $value->account_date ?></td>
+                        <td><?php echo $value->account_number ?></td>
                          <td><?php
                             $account_type = $this->finance_model->account_type(null,$value->account_type)->row();
                             echo $account_type->name
@@ -31,9 +34,11 @@
                             $account_type = $this->finance_model->account_type_sub(null,$value->account_type,$value->sub_account_type)->row();
                             echo $account_type->name
                             ?></td>
-                        <td><?php echo $value->name ?></td>
+                        <td><?php echo $value->account_amount ?></td>
                        
                        <td ><?php echo $value->description ?></td>
+
+                       <td ><?php echo $value->name ?></td>
                         <td>
                             <?php if($value->edit == 1){ ?>
                             <a href="<?php echo site_url(current_lang() . '/finance/finance_account_edit/' . encode_id($value->id)); ?>"><i class="fa fa-edit"></i> <?php echo lang('button_edit'); ?> </a>

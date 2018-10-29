@@ -5,8 +5,12 @@
  * and open the template in the editor.
  */
 
-$lang['finance_account_create'] = 'Create New Account Chart';
+$lang['finance_account_create'] = 'Create New Statement of Financial ';
 $lang['finance_account_name'] = 'Account Name';
+$lang['finance_account_date'] = 'Date';
+$lang['finance_account_number'] = 'Account Number';
+$lang['finance_account_amount'] = 'Amount';
+$lang['finance_account_name2'] = 'Name';
 $lang['finance_account_type'] = 'Account Type';
 $lang['finance_account_description'] = 'Description';
 $lang['finance_account_is_header'] = 'is Header ?';

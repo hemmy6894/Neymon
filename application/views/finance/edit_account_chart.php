@@ -21,6 +21,22 @@ if(isset($parent_info)){ ?>
 <?php }
 ?>
 
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('finance_account_date'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-6">
+        <input type="date" name="accountdate" value="<?php echo $accountinfo->name; ?>"  class="form-control"/> 
+        <?php echo form_error('accountdate'); ?>
+    </div>
+</div>
+
+
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('finance_account_number'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-6">
+        <input type="text" name="accountnumber" value="<?php echo $accountinfo->name; ?>"  class="form-control"/> 
+        <?php echo form_error('accountnumber'); ?>
+    </div>
+</div>
+
+
 <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('finance_account_type'); ?>  : <span class="required">*</span></label>
     <div class="col-lg-6">
         <select class="form-control" name="account_type">
@@ -45,18 +61,28 @@ if(isset($parent_info)){ ?>
     </div>
 </div>
 
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('finance_account_name'); ?>  : <span class="required">*</span></label>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('finance_account_amount'); ?>  : <span class="required">*</span></label>
     <div class="col-lg-6">
-        <input type="text" name="accountname" value="<?php echo $accountinfo->name; ?>"  class="form-control"/> 
-        <?php echo form_error('accountname'); ?>
+        <input type="text" name="accountamount" value="<?php echo $accountinfo->name; ?>"  class="form-control"/> 
+        <?php echo form_error('accountamount'); ?>
     </div>
 </div>
+
+
 <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('finance_account_description'); ?>  : </label>
     <div class="col-lg-6">
         <textarea name="accountdescription" class="form-control"><?php echo $accountinfo->description; ?></textarea> 
         <?php echo form_error('accountdescription'); ?>
     </div>
 </div>
+
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('finance_account_name2'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-6">
+        <input type="text" name="accountname2" value="<?php echo $accountinfo->name; ?>"  class="form-control"/> 
+        <?php echo form_error('accountname2'); ?>
+    </div>
+</div>
+
 <?php if(is_null($parent)){ ?>
 <div class="form-group" style="display: none;"><label class="col-lg-3 control-label"><?php echo lang('finance_account_is_header'); ?>  : </label>
     <div class="col-lg-6">

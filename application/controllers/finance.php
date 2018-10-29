@@ -39,13 +39,17 @@ class Finance extends CI_Controller {
 
     function finance_account_create($parent_account = null) {
 
-        $this->data['parent'] = $parent_account;
+       // $this->data['parent'] = $parent_account;
         $this->data['title'] = lang('finance_account_create');
-        if (!is_null($parent_account)) {
-            $this->data['parent_info'] = $this->finance_model->account_chart(null, $parent_account)->row();
-        }
+        //if (!is_null($parent_account)) {
+           // $this->data['parent_info'] = $this->finance_model->account_chart(null, $parent_account)->row();
+       // }
         $this->form_validation->set_rules('account_type', lang('member_group_description'), 'required');
-        $this->form_validation->set_rules('accountname', lang('finance_account_name'), 'required');
+        $this->form_validation->set_rules('accountdate', lang('finance_account_date'), 'required');
+        $this->form_validation->set_rules('accountnumber', lang('finance_account_number'), 'required');
+        $this->form_validation->set_rules('accountamount', lang('finance_account_amount'), 'required');
+        $this->form_validation->set_rules('accountname2', lang('finance_account_name2'), 'required');
+        
         $this->form_validation->set_rules('accountdescription', lang('finance_account_description'), '');
 
 
@@ -64,21 +68,27 @@ class Finance extends CI_Controller {
               }
              */
 
+            $date = $this->input->post('accountdate');
+            $accountnumber = $this->input->post('accountnumber');
             $tmp = $this->input->post('account_type');
-            $name = $this->input->post('accountname');
+            $accountamount = $this->input->post('accountamount');
             $description = $this->input->post('accountdescription');
+            $name = $this->input->post('accountname2');
             $tmp1 = explode('_', $tmp);
             $accounttype = $tmp1[0];
             $accounttype_sub = $tmp1[1];
 
 
             $create_account = array(
+                'account_date' => $date,
+                'account_number' => $accountnumber,
                 'account_type' => $accounttype,
                 'sub_account_type' => $accounttype_sub,
-                'name' => trim($name),
+                'account_amount' => trim($accountamount),
                 'description' => trim($description),
-                'createdby' => current_user()->id,
-                'PIN' => current_user()->PIN
+                'name' => trim($name),
+                //'createdby' => current_user()->id,
+               // 'PIN' => current_user()->PIN
             );
             $return = $this->finance_model->create_chart_account($create_account);
             if ($return) {
@@ -95,6 +105,7 @@ class Finance extends CI_Controller {
         $this->load->view('template', $this->data);
     }
 
+
     function finance_account_edit($id) {
         $this->data['id'] = $id;
         $id = decode_id($id);
@@ -106,9 +117,12 @@ class Finance extends CI_Controller {
         if ($accountinfo->account_parent != 0) {
             $this->data['parent_info'] = $this->finance_model->account_chart(null, $accountinfo->account_parent)->row();
         }
+        $this->form_validation->set_rules('accountdate', lang('finance_account_date'), 'required');
+        $this->form_validation->set_rules('accountnumber', lang('finance_account_number'), 'required');
         $this->form_validation->set_rules('account_type', lang('member_group_description'), 'required');
-        $this->form_validation->set_rules('accountname', lang('finance_account_name'), 'required');
+        $this->form_validation->set_rules('accountamount', lang('finance_account_amount'), 'required');
         $this->form_validation->set_rules('accountdescription', lang('finance_account_description'), '');
+        $this->form_validation->set_rules('accountname2', lang('finance_account_name2'), 'required');
         $this->form_validation->set_rules('is_header', lang('finance_account_is_header'), '');
 
 
@@ -116,7 +130,10 @@ class Finance extends CI_Controller {
 
 
             $tmp = $this->input->post('account_type');
-            $name = $this->input->post('accountname');
+            $name = $this->input->post('accountname2');
+            $date = $this->input->post('accountdate');
+            $anumber = $this->input->post('accountnumber');
+            $amount = $this->input->post('accountamount');
             $description = $this->input->post('accountdescription');
             $tmp1 = explode('_', $tmp);
             $accounttype = $tmp1[0];
@@ -124,11 +141,14 @@ class Finance extends CI_Controller {
 
 
             $create_account = array(
+                'account_date' => $accountdate,
+                'account_number' => $accountnumber,
                 'account_type' => $accounttype,
                 'sub_account_type' => $accounttype_sub,
+                'account_amount' => $accountamount,
                 'name' => trim($name),
                 'description' => trim($description),
-                'PIN' => current_user()->PIN
+                //'PIN' => current_user()->PIN
             );
 
             $return = $this->finance_model->edit_chart_account($create_account, $id);
