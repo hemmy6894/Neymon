@@ -66,7 +66,7 @@ if (isset($message) && !empty($message)) {
                 <td style="text-align: right;"><?php echo number_format($value->loan_amount_rate,2) ?></td>
                 <td style="text-align: right;"><?php echo number_format($value->loan_amount_total,2) ?></td>
                 <td ><?php echo $value->d_loan_status; ?></td>
-                 <td><?php echo anchor(current_lang() . "/loan/view_indetail/" . encode_id($value->loan_id), ' <i class="fa fa-folder-open"></i> ' . lang('loan_view_detail'));
+                 <td><?php echo anchor(current_lang() . "/loan_3/view_indetail/" . encode_id($value->loan_id), ' <i class="fa fa-folder-open"></i> ' . lang('loan_view_detail'));
                  if($value->edited == 0){
                      echo anchor(current_lang().'/loan/loan_editing/'.encode_id($value->loan_id),' |  <i class="fa fa-edit"></i> ' . lang('button_edit'));
                  }

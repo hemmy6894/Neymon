@@ -226,12 +226,12 @@ class Member_Model extends CI_Model {
     }
 
     function member_basic_info($id = null, $PID = null, $member_id = null) {
-        $this->db->where('PIN', current_user()->PIN);
+       // $this->db->where('PIN', current_user()->PIN);
         if (!is_null($id)) {
             $this->db->where('id', $id);
         }
         if (!is_null($PID)) {
-            $this->db->where('PID', $PID);
+            $this->db->where('PID', 1000006);
         }
         if (!is_null($member_id)) {
             $this->db->where('member_id', $member_id);

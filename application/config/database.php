@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = 'localhost:3388';
 $db['default']['username'] = 'root';
 $db['default']['password'] = "";//'tea*100%';
 $db['default']['database'] = 'tea_testing';

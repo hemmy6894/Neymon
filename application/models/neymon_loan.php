@@ -22,6 +22,23 @@
 			}
 		}
 		
+		function loan_info($loanid = null, $pin = null, $member_id = null) {
+
+			if (!is_null($loanid)) {
+				$this->db->where('neymon_loan.loan_id', $loanid);
+			}
+			if (!is_null($pin)) {
+				//$this->db->where('PID', $pin);
+			}
+			if (!is_null($member_id)) {
+				//$this->db->where('member_id', $member_id);
+			}
+
+			$this->db->join('neymon_loan_details','neymon_loan_details.dloan_no = neymon_loan.loan_id');
+			return $this->db->get('neymon_loan');
+		}
+	
+	
 		function view($loan = null,$limit = null, $start = null){
 			if(!is_null($loan)){
 				$this->db->where(array('loan_id' => $loan));

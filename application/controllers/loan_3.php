@@ -13,6 +13,7 @@
 			$this->lang->load('setting');
 			$this->lang->load('customer');
 			$this->load->model('neymon_loan');
+			$this->load->model('loan_model');
 			$this->load->model('member_model');
 			$this->load->model('setting_model');
 		}
@@ -88,6 +89,20 @@
 			$this->load->view('template', $this->data);
 		}
 		
+		function view_indetail($loanid) {
+			$this->data['title'] = lang('loan_viewdetails');
+			$this->data['loanid'] = $loanid;
+			$LID = decode_id($loanid);
+			$this->data['loaninfo'] = $this->neymon_loan->loan_info($LID)->row();
+			$this->data['function_view'] = function($datas){
+				$this->view_calculator($datas);
+			};
+			//print_r($this->data['loaninfo']);
+			//die();
+			$this->data['content'] = 'loan/neymon_loan_view_in_details';
+			$this->load->view('template', $this->data);
+		}
+	
 		function view($loanno = null){
 			$this->load->library('pagination');
 			
@@ -133,7 +148,7 @@
 			$page = ($this->uri->segment(4) ? $this->uri->segment(4) : 0);
 			$this->data['links'] = $this->pagination->create_links();
 			$rs = $returned_data->result();
-			$this->data['loan_list'] = $rs;;
+			$this->data['loan_list'] = $rs;
 			$this->data['content'] = 'loan/neymon_view_loan';
 			$this->load->view('template', $this->data);
 		}
@@ -153,6 +168,7 @@
 					</tr>
 					<?php
 						$b = 0;
+						$calculator = json_decode($calculator);
 						foreach($calculator as $c){
 							$c = (array)$c;
 							$payed = $c['payed'];
