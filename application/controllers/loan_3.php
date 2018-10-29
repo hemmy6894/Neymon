@@ -13,6 +13,8 @@
 			$this->lang->load('setting');
 			$this->lang->load('customer');
 			$this->load->model('neymon_loan');
+			$this->load->model('member_model');
+			$this->load->model('setting_model');
 		}
 		function index(){
 			if($this->input->post('requested_amount')){
@@ -87,14 +89,53 @@
 		}
 		
 		function view($loanno = null){
-			$rs = $this->neymon_loan->view($loanno);
-			foreach($rs as $r){
-				$userId = $r->user_id;
-				$userId = $r->user_id;
-				$array = json_decode($r->calculation);
-			}
+			$this->load->library('pagination');
 			
-			$this->view_calculator($array);
+			$this->data['title'] = lang('loan_list');
+			if (!$this->ion_auth->logged_in()) {
+				//redirect them to the login page
+				redirect('auth/login', 'refresh');
+			}
+			if (isset($_GET['row_per_pg'])) {
+				$this->session->set_userdata('PER_PAGE', $_GET['row_per_pg']);
+			} else if (!$this->session->userdata('PER_PAGE')) {
+				$this->session->set_userdata('PER_PAGE', 40);
+			}
+			$config["per_page"] = $this->session->userdata('PER_PAGE');
+			$key = null;
+			if (isset($_POST['key']) && $_POST['key'] != '') {
+				$key = $_POST['key'];
+			} else if (isset($_GET['key'])) {
+				$key = $_GET['key'];
+			}
+			if (!is_null($key)) {
+				$config['suffix'] = '?key=' . $key;
+			}
+			$page = ($this->uri->segment(4) ? $this->uri->segment(4) : 0);
+			$returned_data = $this->neymon_loan->view($key,$config["per_page"],$page);
+			$config["base_url"] = site_url(current_lang() . '/loan/loan_viewlist/');
+			$config["total_rows"] = $returned_data->num_rows;
+			$config["uri_segment"] = 4;
+			$config['full_tag_open'] = '<div class="pagination" style="background-color:#fff; margin-left:0px;">';
+			$config['full_tag_close'] = '</div>';
+			$config['num_tag_open'] = '<div class="link-pagination">';
+			$config['num_tag_close'] = '</div>';
+			$config['prev_tag_open'] = '<div class="link-pagination">';
+			$config['prev_tag_close'] = '</div>';
+			$config['next_tag_open'] = '<div class="link-pagination">';
+			$config['next_tag_close'] = '</div>';
+			$config['next_link'] = 'Next';
+			$config['prev_link'] = 'Previous';
+			$config['cur_tag_open'] = '<div class="link-pagination current">';
+			$config['cur_tag_close'] = '</div>';
+			$config["num_links"] = 10;
+			$this->pagination->initialize($config);
+			$page = ($this->uri->segment(4) ? $this->uri->segment(4) : 0);
+			$this->data['links'] = $this->pagination->create_links();
+			$rs = $returned_data->result();
+			$this->data['loan_list'] = $rs;;
+			$this->data['content'] = 'loan/neymon_view_loan';
+			$this->load->view('template', $this->data);
 		}
 		
 		function view_calculator($calculator){

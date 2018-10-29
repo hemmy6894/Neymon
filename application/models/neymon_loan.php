@@ -22,12 +22,15 @@
 			}
 		}
 		
-		function view($loan = null){
+		function view($loan = null,$limit = null, $start = null){
 			if(!is_null($loan)){
 				$this->db->where(array('loan_id' => $loan));
 			}
 			$this->db->join('neymon_loan_details', 'neymon_loan_details.dloan_no = neymon_loan.loan_id');
-			return $this->db->get('neymon_loan')->result();
+			$this->db->order_by('neymon_loan.loan_id','ASC');
+			if(!is_null($limit) && !is_null($start))
+			$this->db->limit($limit,$start);
+			return $this->db->get('neymon_loan');
 		}
 		function activities_create($activities){
 			if($activities){

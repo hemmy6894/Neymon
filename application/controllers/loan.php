@@ -1160,7 +1160,7 @@ class Loan extends CI_Controller {
         $config['cur_tag_close'] = '</div>';
         $config["num_links"] = 10;
         $this->pagination->initialize($config);
-        $page = ($this->uri->segment(4) ? $this->uri->segment(4) : 0);
+       
         $this->data['links'] = $this->pagination->create_links();
         $this->data['loan_list'] = $this->loan_model->search_loan($key, $config["per_page"], $page);
         $this->data['content'] = 'loan/viewloanlist';

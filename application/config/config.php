@@ -15,7 +15,8 @@
 |
 */
 $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
-$config['base_url'] .= "://".$_SERVER['HTTP_HOST'].'/neymon_loan/';
+///$config['base_url'] .= "://".$_SERVER['HTTP_HOST'].'/neymon_loan/';
+$config['base_url'] .= "://".$_SERVER['HTTP_HOST'].'/mkomevu/neymon/';
 date_default_timezone_set('Africa/Dar_es_Salaam');
 
 /*
