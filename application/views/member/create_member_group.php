@@ -11,16 +11,53 @@ if (isset($message) && !empty($message)) {
     echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
 }
 ?>
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_group_name'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
-        <input type="text" name="gpname" value="<?php echo set_value('gpname'); ?>"  class="form-control"/> 
-        <?php echo form_error('gpname'); ?>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('company_name'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-3">
+        <input type="text" name="company_name" value="<?php echo set_value('company_name'); ?>"  class="form-control"/> 
+        <?php echo form_error('company_name'); ?>
     </div>
 </div>
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_group_description'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
-        <textarea  name="gpdescription" class="form-control"><?php echo set_value('gpdescription'); ?></textarea>
-        <?php echo form_error('gpdescription'); ?>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('company_slp'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-3">
+        <input type="text" name="company_slp" value="<?php echo set_value('company_slp'); ?> "  class="form-control" /> 
+        <?php echo form_error('company_slp'); ?>
+    </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('company_city'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-3">
+    <input type="text" name="company_city" value="<?php echo set_value('company_city'); ?>"  class="form-control"/> 
+        <?php echo form_error('company_city'); ?>
+    </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('company_district'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-3">
+        <input type="text" name="company_distrit" value="<?php echo set_value('company_distrit'); ?>"  class="form-control" /> 
+        <?php echo form_error('company_distrit'); ?>
+    </div>
+</div>
+<!--phone-->
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('company_phone'); ?>  : </label>
+            <div class="col-lg-3">
+                <input type="text" name="company_phone" value="<?php echo set_value('company_phone'); ?>" min="10" class="form-control"/>
+                <?php echo form_error('company_phone'); ?>
+            </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('company_ward'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-3">
+        <input type="text" name="company_ward" value="<?php echo set_value('company_ward'); ?> "  class="form-control" /> 
+        <?php echo form_error('company_ward'); ?>
+    </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('company_street'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-3">
+        <input type="text" name="company_street" value="<?php echo set_value('company_street'); ?> "  class="form-control" /> 
+        <?php echo form_error('company_street'); ?>
+    </div>
+</div>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('company_email'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-3">
+        <input type="text" name="company_email" value="<?php echo set_value('company_email'); ?> "  class="form-control" /> 
+        <?php echo form_error('company_email'); ?>
     </div>
 </div>
 

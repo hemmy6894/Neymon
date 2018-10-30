@@ -19,7 +19,7 @@ class Member_Model extends CI_Model {
 
     function is_member_exist($member_id) {
         $this->db->where('PIN', current_user()->PIN);
-        $this->db->where('member_id', $member_id);
+        $this->db->where('memberid_type', $member_id);
         $data = $this->db->get('members')->row();
         if (count($data) == 1) {
             return TRUE;
@@ -42,7 +42,7 @@ class Member_Model extends CI_Model {
             $array_registration = array(
                 'date' => date('Y-m-d'),
                 'PID' => $data['PID'],
-                'member_id' => $data['member_id'],
+                'memberid_type' => $data['memberid_type'],
                 'credit' => $registrationfee,
                 'createdby' => current_user()->id,
                 'PIN' => $pin,
@@ -69,7 +69,7 @@ class Member_Model extends CI_Model {
                 'linkto' => 'member_registrationfee.PID',
                 'fromtable' => 'member_registrationfee',
                 'PID' => $data['PID'],
-                'member_id' => $data['member_id'],
+                'memberid_type' => $data['memberid_type'],
                 'PIN' => $pin
             );
 
@@ -161,7 +161,7 @@ class Member_Model extends CI_Model {
         $this->db->where('PID', $pid);
         $return = $this->db->get('members_contact')->row();
 
-        if (count($return) == 0) {
+        if (count((array)$return) == 0) {
             $fields = $this->db->list_fields('members_contact');
             $fieldschange = array_flip($fields);
             foreach ($fieldschange as $key => $value) {
@@ -234,7 +234,7 @@ class Member_Model extends CI_Model {
             $this->db->where('PID', $PID);
         }
         if (!is_null($member_id)) {
-            $this->db->where('member_id', $member_id);
+            $this->db->where('memberid_type', $member_id);
         }
 
         $this->db->order_by('firstname', 'ASC');
@@ -248,7 +248,7 @@ class Member_Model extends CI_Model {
         $sql = "SELECT * FROM members WHERE PIN='$pin' ";
 
         if (!is_null($key)) {
-            $sql.= " AND ( PID  LIKE '%$key%' OR member_id LIKE '%$key%' OR firstname LIKE '%$key%' OR
+            $sql.= " AND ( PID  LIKE '%$key%' OR memberid_type LIKE '%$key%' OR firstname LIKE '%$key%' OR
             middlename LIKE '%$key%' OR  lastname LIKE '%$key%')";
         }
 
@@ -261,7 +261,7 @@ class Member_Model extends CI_Model {
         $sql = "SELECT * FROM members WHERE PIN='$pin' ";
 
         if (!is_null($key)) {
-            $sql.= " AND ( PID  LIKE '%$key%' OR member_id LIKE '%$key%' OR firstname LIKE '%$key%' OR
+            $sql.= " AND ( PID  LIKE '%$key%' OR memberid_type LIKE '%$key%' OR firstname LIKE '%$key%' OR
             middlename LIKE '%$key%' OR  lastname LIKE '%$key%')";
         }
         $sql.= " LIMIT $start,$limit";

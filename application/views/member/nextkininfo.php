@@ -9,7 +9,7 @@ $this->load->view('member/topmenu');
             <?php echo lang('member_pid') ?> : <?php echo $basicinfo->PID; ?>
         </div>
         <div style="display: block;  margin-top: 5px; font-size: 15px;">
-            <?php echo lang('member_member_id') ?> : <?php echo $basicinfo->member_id; ?>
+            <?php echo lang('member_type_id_number') ?> : <?php echo $basicinfo->memberid_type; ?>
         </div>
         <?php if($basicinfo->category == "Company"){ ?>
         <div style="display: block;  margin-top: 5px; font-size: 15px;">

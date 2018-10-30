@@ -29,9 +29,9 @@ if (isset($message) && !empty($message)) {
 }
 ?>
 
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_member_id'); ?>  : </label>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_type_id_number'); ?>  : </label>
     <div class="col-lg-6">
-        <input type="text" disabled="disabled"  name="memberid" value="<?php echo $basicinfo->member_id; ?>"  class="form-control"/> 
+        <input type="text" disabled="disabled"  name="memberid" value="<?php echo $basicinfo->memberid_type; ?>"  class="form-control"/> 
         <?php echo form_error('memberid'); ?>
     </div>
 </div>

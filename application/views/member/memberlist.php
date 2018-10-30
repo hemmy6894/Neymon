@@ -33,7 +33,7 @@ if (isset($message) && !empty($message)) {
         <thead>
         <tr>
             <th><?php echo lang('member_pid'); ?></th>
-            <th><?php echo lang('member_member_id'); ?></th>
+            <th><?php echo lang('member_type_id_number'); ?></th>
             <th><?php echo lang('member_name'); ?></th>
             <th><?php echo lang('member_category'); ?></th>
             <!-- <th><?php echo lang('member_firstname'); ?></th>
@@ -51,7 +51,7 @@ if (isset($message) && !empty($message)) {
 
             <tr>
                 <td><?php echo htmlspecialchars($value->PID, ENT_QUOTES, 'UTF-8'); ?></td>
-                <td><?php echo htmlspecialchars($value->member_id, ENT_QUOTES, 'UTF-8'); ?></td>
+                <td><?php echo htmlspecialchars($value->memberid_type, ENT_QUOTES, 'UTF-8'); ?></td>
                 <td><?php echo htmlspecialchars($value->firstname, ENT_QUOTES, 'UTF-8')." ".htmlspecialchars($value->middlename, ENT_QUOTES, 'UTF-8')." ".htmlspecialchars($value->lastname, ENT_QUOTES, 'UTF-8'); ?></td>
                 <td><?php if($value->category == "Company"){ echo "Institution"; } else { echo "Staff"; }; ?></td>
                 <!--<td><?php echo htmlspecialchars($value->firstname, ENT_QUOTES, 'UTF-8'); ?></td>

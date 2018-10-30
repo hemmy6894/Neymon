@@ -2385,3 +2385,1058 @@ DEBUG - 2018-10-18 10:17:29 --> File loaded: application/views/member/new_member
 DEBUG - 2018-10-18 10:17:29 --> File loaded: application/views/template.php
 DEBUG - 2018-10-18 10:17:29 --> Final output sent to browser
 DEBUG - 2018-10-18 10:17:29 --> Total execution time: 0.9351
+DEBUG - 2018-10-18 10:39:21 --> Config Class Initialized
+DEBUG - 2018-10-18 10:39:21 --> Hooks Class Initialized
+DEBUG - 2018-10-18 10:39:21 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 10:39:21 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 10:39:21 --> URI Class Initialized
+DEBUG - 2018-10-18 10:39:21 --> Router Class Initialized
+DEBUG - 2018-10-18 10:39:21 --> Output Class Initialized
+DEBUG - 2018-10-18 10:39:21 --> Security Class Initialized
+DEBUG - 2018-10-18 10:39:21 --> Input Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 10:39:22 --> Language Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Loader Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 10:39:22 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 10:39:22 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 10:39:22 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 10:39:22 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 10:39:22 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 10:39:22 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 10:39:22 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 10:39:22 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Session Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 10:39:22 --> Session routines successfully run
+DEBUG - 2018-10-18 10:39:22 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 10:39:22 --> Email Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 10:39:22 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 10:39:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:39:22 --> Model Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Model Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 10:39:22 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 10:39:22 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Model Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Controller Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 10:39:22 --> Model Class Initialized
+DEBUG - 2018-10-18 10:39:22 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:39:22 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 10:39:22 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 10:39:22 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 10:39:22 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 10:39:22 --> Final output sent to browser
+DEBUG - 2018-10-18 10:39:22 --> Total execution time: 1.1128
+DEBUG - 2018-10-18 10:40:23 --> Config Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Hooks Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 10:40:23 --> URI Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Router Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Output Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Security Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Input Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 10:40:23 --> Language Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Loader Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 10:40:23 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 10:40:23 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 10:40:23 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 10:40:23 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 10:40:23 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 10:40:23 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 10:40:23 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 10:40:23 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Session Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 10:40:23 --> Session routines successfully run
+DEBUG - 2018-10-18 10:40:23 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 10:40:23 --> Email Class Initialized
+DEBUG - 2018-10-18 10:40:23 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 10:40:24 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 10:40:24 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:40:24 --> Model Class Initialized
+DEBUG - 2018-10-18 10:40:24 --> Model Class Initialized
+DEBUG - 2018-10-18 10:40:24 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 10:40:24 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 10:40:24 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 10:40:24 --> Model Class Initialized
+DEBUG - 2018-10-18 10:40:24 --> Controller Class Initialized
+DEBUG - 2018-10-18 10:40:24 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 10:40:24 --> Model Class Initialized
+DEBUG - 2018-10-18 10:40:24 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:40:24 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 10:40:24 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 10:40:24 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 10:40:24 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 10:40:24 --> Final output sent to browser
+DEBUG - 2018-10-18 10:40:24 --> Total execution time: 0.9775
+DEBUG - 2018-10-18 10:41:48 --> Config Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Hooks Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 10:41:48 --> URI Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Router Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Output Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Security Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Input Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 10:41:48 --> Language Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Loader Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 10:41:48 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 10:41:48 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 10:41:48 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 10:41:48 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 10:41:48 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 10:41:48 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 10:41:48 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 10:41:48 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Session Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 10:41:48 --> Session routines successfully run
+DEBUG - 2018-10-18 10:41:48 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 10:41:48 --> Email Class Initialized
+DEBUG - 2018-10-18 10:41:48 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 10:41:48 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 10:41:49 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:41:49 --> Model Class Initialized
+DEBUG - 2018-10-18 10:41:49 --> Model Class Initialized
+DEBUG - 2018-10-18 10:41:49 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 10:41:49 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 10:41:49 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 10:41:49 --> Model Class Initialized
+DEBUG - 2018-10-18 10:41:49 --> Controller Class Initialized
+DEBUG - 2018-10-18 10:41:49 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 10:41:49 --> Model Class Initialized
+DEBUG - 2018-10-18 10:41:49 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:41:49 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 10:41:49 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 10:41:49 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 10:41:49 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 10:41:49 --> Final output sent to browser
+DEBUG - 2018-10-18 10:41:49 --> Total execution time: 1.0865
+DEBUG - 2018-10-18 10:44:16 --> Config Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Hooks Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 10:44:16 --> URI Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Router Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Output Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Security Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Input Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 10:44:16 --> Language Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Loader Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 10:44:16 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 10:44:16 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 10:44:16 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 10:44:16 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 10:44:16 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 10:44:16 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 10:44:16 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 10:44:16 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Session Class Initialized
+DEBUG - 2018-10-18 10:44:16 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 10:44:16 --> Session routines successfully run
+DEBUG - 2018-10-18 10:44:17 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 10:44:17 --> Email Class Initialized
+DEBUG - 2018-10-18 10:44:17 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 10:44:17 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 10:44:17 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:44:17 --> Model Class Initialized
+DEBUG - 2018-10-18 10:44:17 --> Model Class Initialized
+DEBUG - 2018-10-18 10:44:17 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 10:44:17 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 10:44:17 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 10:44:17 --> Model Class Initialized
+DEBUG - 2018-10-18 10:44:17 --> Controller Class Initialized
+DEBUG - 2018-10-18 10:44:17 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 10:44:17 --> Model Class Initialized
+DEBUG - 2018-10-18 10:44:17 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:44:17 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 10:44:17 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 10:44:17 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 10:44:17 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 10:44:17 --> Final output sent to browser
+DEBUG - 2018-10-18 10:44:17 --> Total execution time: 1.0034
+DEBUG - 2018-10-18 10:44:50 --> Config Class Initialized
+DEBUG - 2018-10-18 10:44:50 --> Hooks Class Initialized
+DEBUG - 2018-10-18 10:44:50 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 10:44:50 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 10:44:50 --> URI Class Initialized
+DEBUG - 2018-10-18 10:44:50 --> Router Class Initialized
+DEBUG - 2018-10-18 10:44:50 --> Output Class Initialized
+DEBUG - 2018-10-18 10:44:50 --> Security Class Initialized
+DEBUG - 2018-10-18 10:44:50 --> Input Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 10:44:51 --> Language Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Loader Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 10:44:51 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 10:44:51 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 10:44:51 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 10:44:51 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 10:44:51 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 10:44:51 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 10:44:51 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 10:44:51 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Session Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 10:44:51 --> Session routines successfully run
+DEBUG - 2018-10-18 10:44:51 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 10:44:51 --> Email Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 10:44:51 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 10:44:51 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:44:51 --> Model Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Model Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 10:44:51 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 10:44:51 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Model Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Controller Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 10:44:51 --> Model Class Initialized
+DEBUG - 2018-10-18 10:44:51 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:44:51 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 10:44:51 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 10:44:51 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 10:44:51 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 10:44:51 --> Final output sent to browser
+DEBUG - 2018-10-18 10:44:51 --> Total execution time: 1.0074
+DEBUG - 2018-10-18 10:45:42 --> Config Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Hooks Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 10:45:42 --> URI Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Router Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Output Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Security Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Input Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 10:45:42 --> Language Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Loader Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 10:45:42 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 10:45:42 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 10:45:42 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 10:45:42 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 10:45:42 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 10:45:42 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 10:45:42 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 10:45:42 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Session Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 10:45:42 --> Session routines successfully run
+DEBUG - 2018-10-18 10:45:42 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 10:45:42 --> Email Class Initialized
+DEBUG - 2018-10-18 10:45:42 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 10:45:42 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 10:45:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:45:43 --> Model Class Initialized
+DEBUG - 2018-10-18 10:45:43 --> Model Class Initialized
+DEBUG - 2018-10-18 10:45:43 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 10:45:43 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 10:45:43 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 10:45:43 --> Model Class Initialized
+DEBUG - 2018-10-18 10:45:43 --> Controller Class Initialized
+DEBUG - 2018-10-18 10:45:43 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 10:45:43 --> Model Class Initialized
+DEBUG - 2018-10-18 10:45:43 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:45:43 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 10:45:43 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 10:45:43 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 10:45:43 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 10:45:43 --> Final output sent to browser
+DEBUG - 2018-10-18 10:45:43 --> Total execution time: 1.0151
+DEBUG - 2018-10-18 10:46:14 --> Config Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Hooks Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 10:46:14 --> URI Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Router Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Output Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Security Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Input Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 10:46:14 --> Language Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Loader Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 10:46:14 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 10:46:14 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 10:46:14 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 10:46:14 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 10:46:14 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 10:46:14 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 10:46:14 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 10:46:14 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Session Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 10:46:14 --> Session routines successfully run
+DEBUG - 2018-10-18 10:46:14 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 10:46:14 --> Email Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 10:46:14 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 10:46:14 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:46:14 --> Model Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Model Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 10:46:14 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 10:46:14 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Model Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Controller Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 10:46:14 --> Model Class Initialized
+DEBUG - 2018-10-18 10:46:14 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:46:14 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 10:46:15 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 10:46:15 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 10:46:15 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 10:46:15 --> Final output sent to browser
+DEBUG - 2018-10-18 10:46:15 --> Total execution time: 0.9947
+DEBUG - 2018-10-18 10:46:33 --> Config Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> Hooks Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 10:46:33 --> URI Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> Router Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> Output Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> Security Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> Input Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 10:46:33 --> Language Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> Loader Class Initialized
+DEBUG - 2018-10-18 10:46:33 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 10:46:33 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 10:46:33 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 10:46:33 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 10:46:34 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 10:46:34 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 10:46:34 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 10:46:34 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 10:46:34 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 10:46:34 --> Session Class Initialized
+DEBUG - 2018-10-18 10:46:34 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 10:46:34 --> Session routines successfully run
+DEBUG - 2018-10-18 10:46:34 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 10:46:34 --> Email Class Initialized
+DEBUG - 2018-10-18 10:46:34 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 10:46:34 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 10:46:34 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:46:34 --> Model Class Initialized
+DEBUG - 2018-10-18 10:46:34 --> Model Class Initialized
+DEBUG - 2018-10-18 10:46:34 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 10:46:34 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 10:46:34 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 10:46:34 --> Model Class Initialized
+DEBUG - 2018-10-18 10:46:34 --> Controller Class Initialized
+DEBUG - 2018-10-18 10:46:34 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 10:46:34 --> Model Class Initialized
+DEBUG - 2018-10-18 10:46:34 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:46:34 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 10:46:34 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 10:46:34 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 10:46:34 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 10:46:34 --> Final output sent to browser
+DEBUG - 2018-10-18 10:46:34 --> Total execution time: 1.0148
+DEBUG - 2018-10-18 10:54:09 --> Config Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Hooks Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 10:54:09 --> URI Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Router Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Output Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Security Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Input Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 10:54:09 --> Language Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Loader Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 10:54:09 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 10:54:09 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 10:54:09 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 10:54:09 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 10:54:09 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 10:54:09 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 10:54:09 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 10:54:09 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Session Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 10:54:09 --> Session routines successfully run
+DEBUG - 2018-10-18 10:54:09 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 10:54:09 --> Email Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 10:54:09 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 10:54:09 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:54:09 --> Model Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Model Class Initialized
+DEBUG - 2018-10-18 10:54:09 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 10:54:09 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 10:54:10 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 10:54:10 --> Model Class Initialized
+DEBUG - 2018-10-18 10:54:10 --> Controller Class Initialized
+DEBUG - 2018-10-18 10:54:10 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 10:54:10 --> Model Class Initialized
+DEBUG - 2018-10-18 10:54:10 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 10:54:10 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 10:54:10 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_kampuni C:\xampp\htdocs\Neymon\application\views\member\new_member.php 194
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_slp C:\xampp\htdocs\Neymon\application\views\member\new_member.php 200
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_mji C:\xampp\htdocs\Neymon\application\views\member\new_member.php 211
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_wilaya C:\xampp\htdocs\Neymon\application\views\member\new_member.php 217
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_kata C:\xampp\htdocs\Neymon\application\views\member\new_member.php 223
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_mtaa C:\xampp\htdocs\Neymon\application\views\member\new_member.php 234
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_nyumba C:\xampp\htdocs\Neymon\application\views\member\new_member.php 240
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_simu C:\xampp\htdocs\Neymon\application\views\member\new_member.php 251
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_email C:\xampp\htdocs\Neymon\application\views\member\new_member.php 257
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_kitambulisho C:\xampp\htdocs\Neymon\application\views\member\new_member.php 268
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_kitambulisho_no C:\xampp\htdocs\Neymon\application\views\member\new_member.php 274
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_kitambulisho_mtoaji C:\xampp\htdocs\Neymon\application\views\member\new_member.php 280
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_kitambulisho_ilipotolewa C:\xampp\htdocs\Neymon\application\views\member\new_member.php 291
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_kitambulisho_date C:\xampp\htdocs\Neymon\application\views\member\new_member.php 297
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_kitambulisho_date_end C:\xampp\htdocs\Neymon\application\views\member\new_member.php 303
+ERROR - 2018-10-18 10:54:10 --> Severity: Notice  --> Undefined variable: ajira_salary C:\xampp\htdocs\Neymon\application\views\member\new_member.php 314
+DEBUG - 2018-10-18 10:54:10 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 10:54:10 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 10:54:10 --> Final output sent to browser
+DEBUG - 2018-10-18 10:54:10 --> Total execution time: 1.3909
+DEBUG - 2018-10-18 11:47:36 --> Config Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Hooks Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 11:47:36 --> URI Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Router Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Output Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Security Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Input Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 11:47:36 --> Language Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Loader Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 11:47:36 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 11:47:36 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 11:47:36 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 11:47:36 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 11:47:36 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 11:47:36 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 11:47:36 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 11:47:36 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Session Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 11:47:36 --> Session routines successfully run
+DEBUG - 2018-10-18 11:47:36 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 11:47:36 --> Email Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 11:47:36 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 11:47:36 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:47:36 --> Model Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Model Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 11:47:36 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 11:47:36 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Model Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Controller Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 11:47:36 --> Model Class Initialized
+DEBUG - 2018-10-18 11:47:36 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:47:36 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 11:47:36 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 11:49:19 --> Config Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> Hooks Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 11:49:19 --> URI Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> Router Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> Output Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> Security Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> Input Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 11:49:19 --> Language Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> Loader Class Initialized
+DEBUG - 2018-10-18 11:49:19 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 11:49:19 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 11:49:19 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 11:49:19 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 11:49:19 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 11:49:19 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 11:49:19 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 11:49:20 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 11:49:20 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 11:49:20 --> Session Class Initialized
+DEBUG - 2018-10-18 11:49:20 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 11:49:20 --> Session routines successfully run
+DEBUG - 2018-10-18 11:49:20 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 11:49:20 --> Email Class Initialized
+DEBUG - 2018-10-18 11:49:20 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 11:49:20 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 11:49:20 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:49:20 --> Model Class Initialized
+DEBUG - 2018-10-18 11:49:20 --> Model Class Initialized
+DEBUG - 2018-10-18 11:49:20 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 11:49:20 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 11:49:20 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 11:49:20 --> Model Class Initialized
+DEBUG - 2018-10-18 11:49:20 --> Controller Class Initialized
+DEBUG - 2018-10-18 11:49:20 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 11:49:20 --> Model Class Initialized
+DEBUG - 2018-10-18 11:49:20 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:49:20 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 11:49:20 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 11:49:49 --> Config Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Hooks Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 11:49:49 --> URI Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Router Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Output Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Security Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Input Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 11:49:49 --> Language Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Loader Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 11:49:49 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 11:49:49 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 11:49:49 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 11:49:49 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 11:49:49 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 11:49:49 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 11:49:49 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 11:49:49 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Session Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 11:49:49 --> Session routines successfully run
+DEBUG - 2018-10-18 11:49:49 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 11:49:49 --> Email Class Initialized
+DEBUG - 2018-10-18 11:49:49 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 11:49:49 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 11:49:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:49:50 --> Model Class Initialized
+DEBUG - 2018-10-18 11:49:50 --> Model Class Initialized
+DEBUG - 2018-10-18 11:49:50 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 11:49:50 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 11:49:50 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 11:49:50 --> Model Class Initialized
+DEBUG - 2018-10-18 11:49:50 --> Controller Class Initialized
+DEBUG - 2018-10-18 11:49:50 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 11:49:50 --> Model Class Initialized
+DEBUG - 2018-10-18 11:49:50 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:49:50 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 11:49:50 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 11:49:50 --> Could not find the language line "hint_date_end"
+ERROR - 2018-10-18 11:49:50 --> Severity: Notice  --> Undefined variable: key C:\xampp\htdocs\Neymon\application\views\member\new_member.php 397
+ERROR - 2018-10-18 11:49:50 --> Severity: Notice  --> Undefined variable: value C:\xampp\htdocs\Neymon\application\views\member\new_member.php 397
+DEBUG - 2018-10-18 11:49:50 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 11:49:50 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 11:49:50 --> Final output sent to browser
+DEBUG - 2018-10-18 11:49:50 --> Total execution time: 1.1880
+DEBUG - 2018-10-18 11:52:47 --> Config Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> Hooks Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 11:52:47 --> URI Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> Router Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> Output Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> Security Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> Input Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 11:52:47 --> Language Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> Loader Class Initialized
+DEBUG - 2018-10-18 11:52:47 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 11:52:48 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 11:52:48 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 11:52:48 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 11:52:48 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 11:52:48 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 11:52:48 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 11:52:48 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 11:52:48 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 11:52:48 --> Session Class Initialized
+DEBUG - 2018-10-18 11:52:48 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 11:52:48 --> Session routines successfully run
+DEBUG - 2018-10-18 11:52:48 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 11:52:48 --> Email Class Initialized
+DEBUG - 2018-10-18 11:52:48 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 11:52:48 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 11:52:48 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:52:48 --> Model Class Initialized
+DEBUG - 2018-10-18 11:52:48 --> Model Class Initialized
+DEBUG - 2018-10-18 11:52:48 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 11:52:48 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 11:52:48 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 11:52:48 --> Model Class Initialized
+DEBUG - 2018-10-18 11:52:48 --> Controller Class Initialized
+DEBUG - 2018-10-18 11:52:48 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 11:52:48 --> Model Class Initialized
+DEBUG - 2018-10-18 11:52:48 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:52:48 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 11:52:48 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 11:52:48 --> Could not find the language line "hint_date_end"
+DEBUG - 2018-10-18 11:52:48 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 11:52:48 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 11:52:48 --> Final output sent to browser
+DEBUG - 2018-10-18 11:52:48 --> Total execution time: 1.0983
+DEBUG - 2018-10-18 11:55:20 --> Config Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> Hooks Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 11:55:20 --> URI Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> Router Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> Output Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> Security Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> Input Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 11:55:20 --> Language Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> Loader Class Initialized
+DEBUG - 2018-10-18 11:55:20 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 11:55:20 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 11:55:20 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 11:55:20 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 11:55:21 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 11:55:21 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 11:55:21 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 11:55:21 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 11:55:21 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 11:55:21 --> Session Class Initialized
+DEBUG - 2018-10-18 11:55:21 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 11:55:21 --> Session routines successfully run
+DEBUG - 2018-10-18 11:55:21 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 11:55:21 --> Email Class Initialized
+DEBUG - 2018-10-18 11:55:21 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 11:55:21 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 11:55:21 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:55:21 --> Model Class Initialized
+DEBUG - 2018-10-18 11:55:21 --> Model Class Initialized
+DEBUG - 2018-10-18 11:55:21 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 11:55:21 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 11:55:21 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 11:55:21 --> Model Class Initialized
+DEBUG - 2018-10-18 11:55:21 --> Controller Class Initialized
+DEBUG - 2018-10-18 11:55:21 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 11:55:21 --> Model Class Initialized
+DEBUG - 2018-10-18 11:55:21 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 11:55:21 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 11:55:21 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 11:55:21 --> Could not find the language line "hint_date_end"
+DEBUG - 2018-10-18 11:55:21 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 11:55:21 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 11:55:21 --> Final output sent to browser
+DEBUG - 2018-10-18 11:55:21 --> Total execution time: 1.1202
+DEBUG - 2018-10-18 12:04:47 --> Config Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Hooks Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 12:04:47 --> URI Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Router Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Output Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Security Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Input Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 12:04:47 --> Language Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Loader Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 12:04:47 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 12:04:47 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 12:04:47 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 12:04:47 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 12:04:47 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 12:04:47 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 12:04:47 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 12:04:47 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Session Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 12:04:47 --> Session routines successfully run
+DEBUG - 2018-10-18 12:04:47 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 12:04:47 --> Email Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 12:04:47 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 12:04:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:04:47 --> Model Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Model Class Initialized
+DEBUG - 2018-10-18 12:04:47 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 12:04:48 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 12:04:48 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 12:04:48 --> Model Class Initialized
+DEBUG - 2018-10-18 12:04:48 --> Controller Class Initialized
+DEBUG - 2018-10-18 12:04:48 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 12:04:48 --> Model Class Initialized
+DEBUG - 2018-10-18 12:04:48 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:04:48 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 12:04:48 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 12:04:48 --> Could not find the language line "hint_date_end"
+DEBUG - 2018-10-18 12:04:48 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 12:04:48 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 12:04:48 --> Final output sent to browser
+DEBUG - 2018-10-18 12:04:48 --> Total execution time: 1.0884
+DEBUG - 2018-10-18 12:06:59 --> Config Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Hooks Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 12:06:59 --> URI Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Router Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Output Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Security Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Input Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 12:06:59 --> Language Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Loader Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 12:06:59 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 12:06:59 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 12:06:59 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 12:06:59 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 12:06:59 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 12:06:59 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 12:06:59 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 12:06:59 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Session Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 12:06:59 --> Session routines successfully run
+DEBUG - 2018-10-18 12:06:59 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 12:06:59 --> Email Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 12:06:59 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 12:06:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:06:59 --> Model Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Model Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 12:06:59 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 12:06:59 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Model Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Controller Class Initialized
+DEBUG - 2018-10-18 12:06:59 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 12:06:59 --> Model Class Initialized
+DEBUG - 2018-10-18 12:07:00 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:07:00 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 12:07:00 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 12:07:00 --> Could not find the language line "hint_date_end"
+DEBUG - 2018-10-18 12:07:00 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 12:07:00 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 12:07:00 --> Final output sent to browser
+DEBUG - 2018-10-18 12:07:00 --> Total execution time: 1.0750
+DEBUG - 2018-10-18 12:09:19 --> Config Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Hooks Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 12:09:19 --> URI Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Router Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Output Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Security Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Input Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 12:09:19 --> Language Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Loader Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 12:09:19 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 12:09:19 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 12:09:19 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 12:09:19 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 12:09:19 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 12:09:19 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 12:09:19 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 12:09:19 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Session Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 12:09:19 --> Session routines successfully run
+DEBUG - 2018-10-18 12:09:19 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 12:09:19 --> Email Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 12:09:19 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 12:09:19 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:09:19 --> Model Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Model Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 12:09:19 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 12:09:19 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Model Class Initialized
+DEBUG - 2018-10-18 12:09:19 --> Controller Class Initialized
+DEBUG - 2018-10-18 12:09:20 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 12:09:20 --> Model Class Initialized
+DEBUG - 2018-10-18 12:09:20 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:09:20 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 12:09:20 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 12:09:20 --> Could not find the language line "hint_date_end"
+DEBUG - 2018-10-18 12:09:20 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 12:09:20 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 12:09:20 --> Final output sent to browser
+DEBUG - 2018-10-18 12:09:20 --> Total execution time: 1.0386
+DEBUG - 2018-10-18 12:10:27 --> Config Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> Hooks Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 12:10:27 --> URI Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> Router Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> Output Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> Security Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> Input Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 12:10:27 --> Language Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> Loader Class Initialized
+DEBUG - 2018-10-18 12:10:27 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 12:10:27 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 12:10:27 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 12:10:27 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 12:10:27 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 12:10:28 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 12:10:28 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 12:10:28 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 12:10:28 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 12:10:28 --> Session Class Initialized
+DEBUG - 2018-10-18 12:10:28 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 12:10:28 --> Session routines successfully run
+DEBUG - 2018-10-18 12:10:28 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 12:10:28 --> Email Class Initialized
+DEBUG - 2018-10-18 12:10:28 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 12:10:28 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 12:10:28 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:10:28 --> Model Class Initialized
+DEBUG - 2018-10-18 12:10:28 --> Model Class Initialized
+DEBUG - 2018-10-18 12:10:28 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 12:10:28 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 12:10:28 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 12:10:28 --> Model Class Initialized
+DEBUG - 2018-10-18 12:10:28 --> Controller Class Initialized
+DEBUG - 2018-10-18 12:10:28 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 12:10:28 --> Model Class Initialized
+DEBUG - 2018-10-18 12:10:28 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:10:28 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 12:10:28 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 12:10:28 --> Could not find the language line "hint_date_end"
+DEBUG - 2018-10-18 12:10:28 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 12:10:28 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 12:10:28 --> Final output sent to browser
+DEBUG - 2018-10-18 12:10:28 --> Total execution time: 1.0299
+DEBUG - 2018-10-18 12:13:29 --> Config Class Initialized
+DEBUG - 2018-10-18 12:13:29 --> Hooks Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 12:13:30 --> URI Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Router Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Output Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Security Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Input Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 12:13:30 --> Language Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Loader Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 12:13:30 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 12:13:30 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 12:13:30 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 12:13:30 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 12:13:30 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 12:13:30 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 12:13:30 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 12:13:30 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Session Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 12:13:30 --> Session routines successfully run
+DEBUG - 2018-10-18 12:13:30 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 12:13:30 --> Email Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 12:13:30 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 12:13:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:13:30 --> Model Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Model Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 12:13:30 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 12:13:30 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Model Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Controller Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 12:13:30 --> Model Class Initialized
+DEBUG - 2018-10-18 12:13:30 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 12:13:30 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 12:13:30 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 12:13:30 --> Could not find the language line "hint_date_end"
+DEBUG - 2018-10-18 12:13:31 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 12:13:31 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 12:13:31 --> Final output sent to browser
+DEBUG - 2018-10-18 12:13:31 --> Total execution time: 1.0790
+DEBUG - 2018-10-18 13:30:36 --> Config Class Initialized
+DEBUG - 2018-10-18 13:30:36 --> Hooks Class Initialized
+DEBUG - 2018-10-18 13:30:36 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 13:30:36 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 13:30:36 --> URI Class Initialized
+DEBUG - 2018-10-18 13:30:36 --> Router Class Initialized
+DEBUG - 2018-10-18 13:30:37 --> Output Class Initialized
+DEBUG - 2018-10-18 13:30:37 --> Security Class Initialized
+DEBUG - 2018-10-18 13:30:37 --> Input Class Initialized
+DEBUG - 2018-10-18 13:30:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 13:30:37 --> Language Class Initialized
+DEBUG - 2018-10-18 13:30:37 --> Loader Class Initialized
+DEBUG - 2018-10-18 13:30:37 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 13:30:37 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 13:30:38 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 13:30:38 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 13:30:38 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 13:30:38 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 13:30:38 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 13:30:38 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 13:30:38 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 13:30:38 --> Session Class Initialized
+DEBUG - 2018-10-18 13:30:38 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 13:30:38 --> Session routines successfully run
+DEBUG - 2018-10-18 13:30:39 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 13:30:39 --> Email Class Initialized
+DEBUG - 2018-10-18 13:30:39 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 13:30:39 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 13:30:39 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 13:30:39 --> Model Class Initialized
+DEBUG - 2018-10-18 13:30:39 --> Model Class Initialized
+DEBUG - 2018-10-18 13:30:39 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 13:30:39 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 13:30:39 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 13:30:40 --> Model Class Initialized
+DEBUG - 2018-10-18 13:30:40 --> Controller Class Initialized
+DEBUG - 2018-10-18 13:30:40 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 13:30:40 --> Model Class Initialized
+DEBUG - 2018-10-18 13:30:40 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 13:30:40 --> Pagination Class Initialized
+DEBUG - 2018-10-18 13:30:41 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 13:30:41 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 13:30:41 --> File loaded: application/views/member/memberlist.php
+DEBUG - 2018-10-18 13:30:41 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 13:30:41 --> Final output sent to browser
+DEBUG - 2018-10-18 13:30:41 --> Total execution time: 5.4130
+DEBUG - 2018-10-18 13:31:00 --> Config Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> Hooks Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 13:31:00 --> URI Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> Router Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> Output Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> Security Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> Input Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 13:31:00 --> Language Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> Loader Class Initialized
+DEBUG - 2018-10-18 13:31:00 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 13:31:01 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 13:31:01 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 13:31:01 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 13:31:01 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 13:31:01 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 13:31:01 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 13:31:01 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 13:31:01 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 13:31:01 --> Session Class Initialized
+DEBUG - 2018-10-18 13:31:01 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 13:31:01 --> Session routines successfully run
+DEBUG - 2018-10-18 13:31:01 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 13:31:01 --> Email Class Initialized
+DEBUG - 2018-10-18 13:31:01 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 13:31:01 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 13:31:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 13:31:01 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:01 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:01 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 13:31:01 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 13:31:01 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 13:31:01 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:01 --> Controller Class Initialized
+DEBUG - 2018-10-18 13:31:01 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 13:31:01 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:01 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 13:31:01 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 13:31:01 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 13:31:01 --> File loaded: application/views/member/create_member_group.php
+DEBUG - 2018-10-18 13:31:01 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 13:31:01 --> Final output sent to browser
+DEBUG - 2018-10-18 13:31:01 --> Total execution time: 0.8090
+DEBUG - 2018-10-18 13:31:07 --> Config Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Hooks Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 13:31:07 --> URI Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Router Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Output Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Security Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Input Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 13:31:07 --> Language Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Loader Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 13:31:07 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 13:31:07 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 13:31:07 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 13:31:07 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 13:31:07 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 13:31:07 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 13:31:07 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 13:31:07 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Session Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 13:31:07 --> Session routines successfully run
+DEBUG - 2018-10-18 13:31:07 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 13:31:07 --> Email Class Initialized
+DEBUG - 2018-10-18 13:31:07 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 13:31:07 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 13:31:07 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 13:31:07 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:08 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:08 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 13:31:08 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 13:31:08 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 13:31:08 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:08 --> Controller Class Initialized
+DEBUG - 2018-10-18 13:31:08 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 13:31:08 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:08 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 13:31:08 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 13:31:08 --> File loaded: application/views/header.php
+DEBUG - 2018-10-18 13:31:08 --> File loaded: application/views/member/member_grouplist.php
+DEBUG - 2018-10-18 13:31:08 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 13:31:08 --> Final output sent to browser
+DEBUG - 2018-10-18 13:31:08 --> Total execution time: 0.8848
+DEBUG - 2018-10-18 13:31:12 --> Config Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Hooks Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Utf8 Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> UTF-8 Support Enabled
+DEBUG - 2018-10-18 13:31:12 --> URI Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Router Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Output Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Security Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Input Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2018-10-18 13:31:12 --> Language Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Loader Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Helper loaded: language_helper
+DEBUG - 2018-10-18 13:31:12 --> Helper loaded: url_helper
+DEBUG - 2018-10-18 13:31:12 --> Helper loaded: file_helper
+DEBUG - 2018-10-18 13:31:12 --> Helper loaded: common_helper
+DEBUG - 2018-10-18 13:31:12 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2018-10-18 13:31:12 --> Language file loaded: language/english/systemlang_lang.php
+DEBUG - 2018-10-18 13:31:12 --> Language file loaded: language/english/member_lang.php
+DEBUG - 2018-10-18 13:31:12 --> Language file loaded: language/english/finance_lang.php
+DEBUG - 2018-10-18 13:31:12 --> Database Driver Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Session Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Helper loaded: string_helper
+DEBUG - 2018-10-18 13:31:12 --> Session routines successfully run
+DEBUG - 2018-10-18 13:31:12 --> Config file loaded: application/config/ion_auth.php
+DEBUG - 2018-10-18 13:31:12 --> Email Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Language file loaded: language/english/ion_auth_lang.php
+DEBUG - 2018-10-18 13:31:12 --> Helper loaded: cookie_helper
+DEBUG - 2018-10-18 13:31:12 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 13:31:12 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Helper loaded: date_helper
+DEBUG - 2018-10-18 13:31:12 --> Helper loaded: form_helper
+DEBUG - 2018-10-18 13:31:12 --> Form Validation Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Controller Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Language file loaded: language/english/setting_lang.php
+DEBUG - 2018-10-18 13:31:12 --> Model Class Initialized
+DEBUG - 2018-10-18 13:31:12 --> Ion_auth class already loaded. Second attempt ignored.
+DEBUG - 2018-10-18 13:31:12 --> File loaded: application/views/menu.php
+DEBUG - 2018-10-18 13:31:12 --> File loaded: application/views/header.php
+ERROR - 2018-10-18 13:31:13 --> Could not find the language line "hint_date_end"
+DEBUG - 2018-10-18 13:31:13 --> File loaded: application/views/member/new_member.php
+DEBUG - 2018-10-18 13:31:13 --> File loaded: application/views/template.php
+DEBUG - 2018-10-18 13:31:13 --> Final output sent to browser
+DEBUG - 2018-10-18 13:31:13 --> Total execution time: 0.7365
