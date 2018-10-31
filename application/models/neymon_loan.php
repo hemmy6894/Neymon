@@ -72,7 +72,7 @@
 			if($activities){
 				return @json_decode($activities);
 			}else{
-				return array("user" => "","action_time" => "", "performed" => "");
+				return (object)array("user" => "","action_time" => "", "performed" => "");
 			}
 		}
 		

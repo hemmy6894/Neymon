@@ -163,6 +163,30 @@
 			$this->data['content'] = 'loan/neymon_loan_evaluation_list';
 			$this->load->view('template', $this->data);
 		}
+		
+		function loan_evaluation_action($loanid) {
+			$pin = current_user()->PIN;
+			$this->data['title'] = lang('loan_evaluation_inaction');
+			$this->data['loanid'] = $loanid;
+			$LID = "LN10000007";//decode_id($loanid);
+			$this->data['loaninfo'] = $this->neymon_loan->loan_info($LID)->row();
+			$this->form_validation->set_rules('status', lang('loan_status'), 'required');
+			$this->form_validation->set_rules('comment', lang('loan_comment'), 'required');
+			if ($this->form_validation->run() == TRUE) {
+				$where = array(
+								'loan_id' => $LID
+							);
+				$array_data = array(
+					'd_loan_status' => $this->input->post('status'),
+					'id_accepted' => current_user()->id
+				);
+				$activities = $this->input->post('comment');
+			}
+			//print_r($this->data['loaninfo']);
+			//die();
+			$this->data['content'] = 'loan/neymon_evaluation_action';
+			$this->load->view('template', $this->data);
+		}
 	
 		function view_calculator($calculator,$action = null){
 			if(is_null($action)){
