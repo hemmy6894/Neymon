@@ -38,6 +38,10 @@
 			return $this->db->get('neymon_loan');
 		}
 	
+		function loan_wait_evaluation() {
+			$pin = current_user()->PIN;
+			return $this->db->query("SELECT * FROM neymon_loan as nl INNER JOIN neymon_loan_details as nld ON nl.loan_id = nld.dloan_no AND PIN='$pin' AND (d_loan_status = 'NEW' OR d_loan_status = 'EVALUATE') AND evaluated = 0 ORDER BY loan_date DESC")->result();
+		}
 	
 		function view($loan = null,$limit = null, $start = null){
 			if(!is_null($loan)){

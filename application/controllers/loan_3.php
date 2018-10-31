@@ -17,7 +17,7 @@
 			$this->load->model('member_model');
 			$this->load->model('setting_model');
 		}
-		function index(){
+		function loan_application(){
 			if($this->input->post('requested_amount')){
 				 $_POST['requested_amount'] = str_replace(',','',$_POST['requested_amount']);
 				 $_POST['grace_period'] = str_replace(',','',$_POST['grace_period']);
@@ -80,8 +80,8 @@
 									);
 									
 				
-				echo $this->neymon_loan->create($loan, $loan_details, "Created");
-				die("SUCCESS");
+				$this->neymon_loan->create($loan, $loan_details, "Created");
+				//die("SUCCESS");
 			}
 			
 			$this->data['loan_interval'] = $this->neymon_loan->get_loan_interval();
@@ -153,9 +153,26 @@
 			$this->load->view('template', $this->data);
 		}
 		
-		function view_calculator($calculator){
+		function loan_evaluation() {
+			$this->data['title'] = lang('loan_evaluation_list');
+			$this->data['loan_wait'] = $this->neymon_loan->loan_wait_evaluation();
+			
+			//print_r($this->data['loan_wait']);
+			
+			//die();
+			$this->data['content'] = 'loan/neymon_loan_evaluation_list';
+			$this->load->view('template', $this->data);
+		}
+	
+		function view_calculator($calculator,$action = null){
+			if(is_null($action)){
+				$action = "readonly";
+				$calculator = json_decode($calculator);
+			}else{
+				$action = "";
+			}
 			?>
-				<table border="1" cellspacing="2" cellpadding="5">
+				<table border="1" cellspacing="2" cellpadding="5" class="table" width="80%">
 					<tr>
 						<th>Month</th>
 						<th>Principal</th>
@@ -163,12 +180,11 @@
 						<th>Interest</th>
 						<th>Month pay</th>
 						<th>Payed</th>
-						<th>Month_remain_balance</th>
+						<th>Month Remain Balance</th>
 						<th>Outstanding</th>
 					</tr>
 					<?php
 						$b = 0;
-						$calculator = json_decode($calculator);
 						foreach($calculator as $c){
 							$c = (array)$c;
 							$payed = $c['payed'];
@@ -179,7 +195,7 @@
 								<td><?=$c['principle_payment'];?></td>
 								<td><?=$c['interest'];?></td>
 								<td><?=$c['month_pay'];?></td>
-								<td><input type="text" id="payed<?=$b++;?>" value="<?=$payed;?>" oninput="onchanged(this)" onkeyup="onchanged(this)"></td>
+								<td><input type="text" id="payed<?=$b++;?>" value="<?=$payed;?>" <?=$action;?> oninput="onchanged(this)" size="12" onkeyup="onchanged(this)"></td>
 								<td><?=$c['month_remain_balance'];?></td>
 								<td><?=$c['outstanding'];?></td>
 							</tr>
@@ -203,7 +219,7 @@
 				$interest2 = $this->interest($principal,$interest);
 				$month_pay = $this->month_pay($principle_payment,$interest2);
 				$month_remain_balance = $this->month_remain_balance($month_pay,(float)$payed_a['payed']);
-				$outstanding = $this->outstanding($principal,$principle_payment,$month_remain_balance);
+				$outstanding = $this->outstanding($principal,$principle_payment,$month_remain_balance,$month_pay);
 
 				$calculator[$i]['month'] = $payed_a['month'];
 				$calculator[$i]['payed'] = $payed_a['payed'];
@@ -236,8 +252,8 @@
 			return $payed - $month_pay;
 		}
 
-		function outstanding($principal,$principle_payment,$month_remain_balance){
-			return $principal - $principle_payment - $month_remain_balance;
+		function outstanding($principal,$principle_payment,$month_remain_balance,$payed = null){
+			return $payed >= 0 ? $principal - $principle_payment  : $principal - $principle_payment - $month_remain_balance;
 		}
 		
 		function query_calculation($loanno){

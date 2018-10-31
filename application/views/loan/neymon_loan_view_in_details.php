@@ -17,7 +17,7 @@ if (isset($message) && !empty($message)) {
 }
 ?>
 
-<div class="col-lg-12">
+<div class="col-lg-12" id="printed_docement">
     <!-- basic information -->
     <?php $memberinfo = $this->member_model->member_basic_info(null, $loaninfo->user_id)->row(); ?>
 
@@ -115,7 +115,7 @@ if (isset($message) && !empty($message)) {
             <table>
                 <tr>
                     <?php
-                    $businessinfo = $this->loan_model->get_loanbusinessinfo($loaninfo->LID);
+                    $businessinfo = $this->loan_model->get_loanbusinessinfo($loaninfo->user_id);
                     ?>
                     <td valign='top'><div style="padding-left: 40px;">
                             <strong><?php echo 'Business Name' ?> : </strong> <?php echo ($businessinfo ? $businessinfo->business_name : ''); ?><br/>
@@ -149,8 +149,8 @@ if (isset($message) && !empty($message)) {
 
 
     <!-- basic loan information -->
-<?php $declaration = $this->loan_model->get_declaration($loaninfo->LID); ?>
-<?php $supporting_doc = $this->loan_model->get_supporting_doc($loaninfo->LID); ?>
+<?php $declaration = $this->loan_model->get_declaration($loaninfo->user_id); ?>
+<?php $supporting_doc = $this->loan_model->get_supporting_doc($loaninfo->user_id); ?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4><?php echo lang('loan_info_header'); ?></h4>
@@ -197,7 +197,7 @@ if (isset($message) && !empty($message)) {
 
 
                 <?php
-                $guarantor_list = $this->loan_model->get_guarantor(null, $loaninfo->LID)->result();
+                $guarantor_list = $this->loan_model->get_guarantor(null, $loaninfo->user_id)->result();
                 if (count($guarantor_list) > 0) {
                     ?>
                     <div class="col-lg-12">
@@ -244,7 +244,7 @@ if (isset($message) && !empty($message)) {
         </div>
         <div class="panel-body">
             <?php
-            $evaluation_histry = $this->loan_model->loan_evaluation_history($loaninfo->LID)->result();
+            $evaluation_histry = $this->loan_model->loan_evaluation_history($loaninfo->user_id)->result();
             foreach ($evaluation_histry as $key => $value) {
                 ?>
                 <div style="border-bottom: 1px solid #ccc; margin-bottom: 20px; <?php echo ($loaninfo->evaluated == $value->status ? 'color:blue' : ''); ?>">
@@ -262,7 +262,7 @@ if (isset($message) && !empty($message)) {
         </div>
         <div class="panel-body">
             <?php
-            $evaluation_histry = $this->loan_model->loan_approval_history($loaninfo->LID)->result();
+            $evaluation_histry = $this->loan_model->loan_approval_history($loaninfo->user_id)->result();
             foreach ($evaluation_histry as $key => $value) {
                 ?>
                 <div style="border-bottom: 1px solid #ccc; margin-bottom: 20px; <?php echo ($loaninfo->evaluated == $value->status ? 'color:blue' : ''); ?>">
@@ -285,11 +285,11 @@ if (isset($message) && !empty($message)) {
 
 
             <?php
-            $evaluation_histry = $this->loan_model->loan_disburse_history($loaninfo->LID)->result();
+            $evaluation_histry = $this->loan_model->loan_disburse_history($loaninfo->user_id)->result();
             foreach ($evaluation_histry as $key => $value) {
                 ?>
                 <div style="border-bottom: 1px solid #ccc; margin-bottom: 20px;">
-                    <strong><?php echo lang('loan_startrepay_date'); ?></strong> : <?php echo format_date($this->loan_model->loan_disburse_date($loaninfo->LID), false); ?><br/>
+                    <strong><?php echo lang('loan_startrepay_date'); ?></strong> : <?php echo format_date($this->loan_model->loan_disburse_date($loaninfo->user_id), false); ?><br/>
                     <strong><?php echo lang('loan_amount_todisburse'); ?></strong> : <?php echo number_format($value->disburseamount, 2); ?><br/>
                     <strong><?php echo lang('loan_startdisburse_date'); ?></strong> : <?php echo format_date($value->disbursedate, false); ?><br/>
                     <strong><?php echo lang('loan_comment'); ?></strong> : <?php echo $value->comment; ?><br/>
@@ -304,5 +304,5 @@ if (isset($message) && !empty($message)) {
 </div>
 
  <div style="text-align: center">
-     <a href="<?php echo site_url(current_lang().'/report_loan/view_indetail_print/'.encode_id($loaninfo->LID)); ?>" class="btn btn-primary">Print</a>
+     <a  onclick="printJS('printed_docement','html')" class="btn btn-primary">Print</a>
   </div>

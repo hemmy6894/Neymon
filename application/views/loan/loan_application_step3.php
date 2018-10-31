@@ -1,5 +1,5 @@
 
-<?php echo form_open_multipart(current_lang() . "/loan_3/index", 'class="form-horizontal"'); ?>
+<?php echo form_open_multipart(current_lang() . "/loan_3/loan_application", 'class="form-horizontal"'); ?>
 <?php
 if (isset($message) && !empty($message)) {
     echo '<div class="label label-info displaymessage">' . $message . '</div>';

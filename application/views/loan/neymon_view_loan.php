@@ -10,6 +10,13 @@ if (isset($message) && !empty($message)) {
 } else if ($this->session->flashdata('warning') != '') {
     echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
 }
+
+							class dataClass{
+								public $member_id = "";
+								public $firstname = "";
+								public $middlename = "";
+								public $lastname = "";
+							}
 ?>
 
 <div class="form-group col-lg-10">
@@ -54,8 +61,12 @@ if (isset($message) && !empty($message)) {
                 <td><?php 
 						if($value->user_id != ""){
 							$info = $this->member_model->member_basic_info(null,$value->user_id)->row();
-							echo $info->member_id.' : '.$info->firstname.' '.$info->middlename.' '.$info->lastname; 
+						}else{
+							$info = new dataClass();//(object)array('member_id' => "",'firstname' => '', 'middlename' => '', 'lastname' => '');
 						}
+							
+							echo $info->member_id.'  '.$info->firstname.' '.$info->middlename.' '.$info->lastname; 
+						
 					?>
 				</td>
                 <td style="text-align: right;"><?php echo number_format($value->loan_amount,2) ?></td>

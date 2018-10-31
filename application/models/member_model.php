@@ -231,7 +231,7 @@ class Member_Model extends CI_Model {
             $this->db->where('id', $id);
         }
         if (!is_null($PID)) {
-            $this->db->where('PID', 1000006);
+            $this->db->where('PID', $PID);
         }
         if (!is_null($member_id)) {
             $this->db->where('member_id', $member_id);
