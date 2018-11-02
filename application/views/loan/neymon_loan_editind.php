@@ -1,29 +1,57 @@
-
-<?php echo form_open_multipart(current_lang() . "/loan_3/loan_application", 'class="form-horizontal"'); ?>
 <?php
-if (isset($message) && !empty($message)) {
-    echo '<div class="label label-info displaymessage">' . $message . '</div>';
-} else if ($this->session->flashdata('message') != '') {
-    echo '<div class="label label-info displaymessage">' . $this->session->flashdata('message') . '</div>';
-} else if (isset($warning) && !empty($warning)) {
-    echo '<div class="label label-danger displaymessage">' . $warning . '</div>';
-} else if ($this->session->flashdata('warning') != '') {
-    echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
-}
-
+$this->load->view('loan/topmenu');
+print_r($basicinfo);
 ?>
 
-		<div style="color: brown;margin: 20px; font-weight: bold; font-size: 13px; border-bottom: 1px solid #ccc;">
-            <?php echo lang('loan_basic_info2'); ?>
+<div style="margin-top: 20px;" class="col-lg-12">
+    
+    
+     <div class="col-lg-3">
+        <img src="<?php echo base_url() ?>uploads/memberphoto/<?php echo $basicinfo->photo; ?>" style="width: 150px; height: 170px; border: 1px solid #ccc;"/>
+        <div style="display: block;  margin-top: 20px; font-size: 15px;">
+            <?php echo lang('member_pid') ?> : <?php echo $basicinfo->PID; ?>
         </div>
-		<div class="form-group">
-            <label class="control-label col-lg-4">Search Client</label>
-            <div class="col-lg-7">
-                <select class="select2_single form-control" tabindex="-1">
-                    <option value=""></option>
-                </select>
+        <div style="display: block;  margin-top: 5px; font-size: 15px;">
+            <?php echo lang('member_member_id') ?> : <?php echo $basicinfo->member_id; ?>
+        </div>
+         <?php if($basicinfo->category == "Company"){ ?>
+        <div style="display: block;  margin-top: 5px; font-size: 15px;">
+            <?php echo lang('companyname') ?> : <?php echo $basicinfo->firstname; ?>
+        </div>
+        <div style="display: block;  margin-top: 5px; font-size: 15px;">
+            <?php echo lang('member_type_id_tin') ?> : <?php echo $basicinfo->TIN; ?>
+        </div>
+        <div style="display: block;  margin-top: 5px; font-size: 15px;">
+            <?php echo lang('certificate_of_incorpation') ?> : <?php echo $basicinfo->incorporation_certificate; ?>
+        </div>
+        <?php } ?>
+         <?php if($basicinfo->category == "Individual"){ ?>
+        <div style="display: block;  margin-top: 5px; font-size: 15px;">
+            <?php echo lang('member_firstname') ?> : <?php echo $basicinfo->firstname; ?>
+        </div>
+        <div style="display: block;  margin-top: 5px; font-size: 15px;">
+            <?php echo lang('member_middlename') ?> : <?php echo $basicinfo->middlename; ?>
+        </div>
+        <div style="display: block;  margin-top: 5px; font-size: 15px;">
+            <?php echo lang('member_lastname') ?> : <?php echo $basicinfo->lastname; ?>
+        </div>
+        <div style="display: block;  margin-top: 5px; font-size: 15px;">
+            <?php echo lang('member_gender') ?> : <?php echo $basicinfo->gender; ?>
+        </div>
+        <?php } ?>
+        <br/><br/>
+    </div>
+    
+    
+
+
+
+<div class="col-lg-9">
+		<link href="<?php echo base_url(); ?>media/css/plugins/datapicker/datepicker3.css" rel="stylesheet"/>
+			<?php echo form_open_multipart(current_lang() . "/loan_3/loan_editing/" . $loanid, 'class="form-horizontal"'); ?>
+			<div style="color: brown;margin: 20px; font-weight: bold; font-size: 13px; border-bottom: 1px solid #ccc;">
+             <?php echo lang('loan_basic_info2'); ?>
             </div>
-        </div>
 		
 			<div class="form-group"><label class="col-lg-4 control-label"> <?=lang('member_type_id_number');?>  : <span class="required">*</span> </label>
                 <div class="col-lg-7">
@@ -117,62 +145,40 @@ if (isset($message) && !empty($message)) {
 				<?php echo form_error('grace_period_unit'); ?>
             </div>
         </div>
-		<div class="form-group">
-            <label class="col-lg-3 control-label">&nbsp;</label>
-            <div class="col-lg-6">
-                <input class="btn btn-primary" value="<?php echo lang('loan_addbtn'); ?>" type="submit"/>
-            </div>
-        </div>
-    <div class="col-lg-5" id="member_info">
-		
-    </div>
-		
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.datetimepicker').datetimepicker({
-            pickTime: false
-        });
-	});
-	
-	$(".select2_single").select2({
-            placeholder: "Select a client",
-            minimumInputLength: 1,
-            ajax: {
-                url:"<?php echo site_url(current_lang() . '/saving/search_by_select2'); ?>",
-                type: "POST",
-                quietMillis: 1000,
-                data: function (term) {
-                    return {
-                        term: term
-                    };
-                },
-                processResults: function (data) {
-                    data = $.parseJSON(data);
-                    return {
-                        results: data
-                    };
+		 <?php if($loaninfo->edited == 1){ ?>
+
+			<div class="form-group">
+				<label class="col-lg-3 control-label">&nbsp;</label>
+				<div class="col-lg-6">
+					<input class="btn btn-primary" value="<?php echo lang('member_edit_btn'); ?>" type="submit"/>
+				</div>
+			</div>
+			
+		 <?php } ?>
+
+    <?php echo form_close(); ?>
+
+    <script src="<?php echo base_url() ?>media/js/script/moment.js"></script>
+    <script src="<?php echo base_url() ?>media/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.datetimepicker').datetimepicker({
+                pickTime: false
+            });
+
+            $("#myCheck").click(function() {
+                if($(this).is(":checked")) {
+                    $(".hide_existing_loan").show();
+                } else {
+                    $(".hide_existing_loan").hide();
                 }
-            },
-            sorter: function(data) {
-                return data.sort(function (a, b) {
-                    if (a.text > b.text) {
-                        return 1;
-                    }
-                    if (a.text < b.text) {
-                        return -1;
-                    }
-                    return 0;
-                });
-            }
+            });
+
         });
-		
-		$('.select2_single').on('select2:select', function (e) {
-            // Do something
-            var selected_element = $(e.currentTarget);
-            selectFind(selected_element.val());
-        });
-		
-		function selectFind(data){
-			$("#member_type_id_number").val(data);
-		}
-</script>
+    </script>
+
+
+
+
+</div>
+</div>

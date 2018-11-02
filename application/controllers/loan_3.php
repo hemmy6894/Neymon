@@ -16,6 +16,7 @@
 			$this->load->model('loan_model');
 			$this->load->model('member_model');
 			$this->load->model('setting_model');
+			$this->load->model('contribution_model');
 		}
 		function loan_application(){
 			if($this->input->post('requested_amount')){
@@ -188,6 +189,29 @@
 			$this->load->view('template', $this->data);
 		}
 	
+		function loan_editing($loanid) {
+			$this->data['loanid'] = $loanid;
+			$LID = decode_id($loanid);
+			$info = $this->neymon_loan->loan_info($LID)->row();
+			
+			$this->data['basicinfo'] = $this->member_model->member_basic_info(null, null, $info->user_id)->row();
+			$l = $this->data['loaninfo'] = $this->neymon_loan->loan_info($LID)->row();
+			$p = $this->data['paysource_list'] = $this->contribution_model->contribution_source()->result();
+			$lp = $this->data['loan_product_list'] = $this->setting_model->loanproduct()->result();
+			
+			/*
+			print_r($l);
+			echo "<br>";
+			echo "<br>";
+			print_r($p);
+			echo "<br>";
+			echo "<br>";
+			print_r($lp);
+			*/
+			//die();
+			$this->data['content'] = 'loan/neymon_loan_editind';
+			$this->load->view('template', $this->data);
+		}
 		function view_calculator($calculator,$action = null){
 			if(is_null($action)){
 				$action = "readonly";
