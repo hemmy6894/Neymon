@@ -242,7 +242,7 @@ if (isset($message) && !empty($message)) {
             <h4 style="display: inline-block;"><?php echo lang('evaluation_comment'); ?></h4>
             <div class="col-lg-3" style="float: right; margin-top: 5px;">
                  <?php if ($loaninfo->edited == 1) {                                    
-                     echo anchor(current_lang().'/loan/loan_editing/'.$loanid,  lang('loan_edit')); 
+                     echo anchor(current_lang().'/loan_3/loan_editing/'.$loanid,  lang('loan_edit')); 
                      
                  } ?>
             </div>

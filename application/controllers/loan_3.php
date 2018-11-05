@@ -194,11 +194,49 @@
 			$LID = decode_id($loanid);
 			$info = $this->neymon_loan->loan_info($LID)->row();
 			
-			$this->data['basicinfo'] = $this->member_model->member_basic_info(null, null, $info->user_id)->row();
+			
+			$this->data['basicinfo'] = $this->member_model->member_basic_info(null, $info->user_id)->row();
 			$l = $this->data['loaninfo'] = $this->neymon_loan->loan_info($LID)->row();
 			$p = $this->data['paysource_list'] = $this->contribution_model->contribution_source()->result();
 			$lp = $this->data['loan_product_list'] = $this->setting_model->loanproduct()->result();
 			
+			$this->form_validation->set_rules('loan_LID', lang('loan_LID'), 'required');
+			$this->form_validation->set_rules('requested_amount', lang('requested_amount'), 'required');
+			$this->form_validation->set_rules('rate', lang('rate'), 'required|numeric');
+			$this->form_validation->set_rules('installment', lang('loan_installment'), 'required|numeric');
+			$this->form_validation->set_rules('installment_mark', lang('loan_installment'), 'required');
+			$this->form_validation->set_rules('applicationdate', lang('loan_applicationdate'), 'required|valid_date');
+			$this->form_validation->set_rules('amount_by_word', lang('amount_by_word'), 'required');
+			$this->form_validation->set_rules('purpose', lang('loan_purpose'), 'required');
+			$this->form_validation->set_rules('grace_period', lang('grace_period'), 'required|numeric');
+			$this->form_validation->set_rules('grace_period_unit', lang('grace_period_unit'), 'required');
+			
+			if(!empty($this->input->post())){
+				//print_r($this->input->post());
+				if($this->form_validation->run()){
+					$loan_update = array(
+											'loan_amount' => $this->input->post('requested_amount'),
+											'loan_rate' => $this->input->post('rate'),
+											'loan_period' => $this->input->post('installment'),
+											'loan_period_mark' => $this->input->post('installment_mark'),
+											'loan_date' => $this->input->post('applicationdate'),
+											'amount_by_word' => $this->input->post('amount_by_word')
+										);
+					$loan_details_update = array(
+							'dloan_purpose' => $this->input->post('requested_amount'),
+							'grace_period' => $this->input->post('rate'),
+							'grace_period_mark' => $this->input->post('installment')
+						);
+						
+					$dloan_no = $this->input->post('loan_LID');
+					$this->neymon_loan->activities_create("Hemedi","neymon_loan_details",$dloan_no,"dloan_no");
+				}else{
+					print_r(form_error('installment'));
+					print_r(form_error('installment_mark'));
+					print_r(form_error('applicationdate'));
+				}
+				die();
+			}
 			/*
 			print_r($l);
 			echo "<br>";
@@ -209,6 +247,7 @@
 			print_r($lp);
 			*/
 			//die();
+			$this->data['loan_interval'] = $this->neymon_loan->get_loan_interval();
 			$this->data['content'] = 'loan/neymon_loan_editind';
 			$this->load->view('template', $this->data);
 		}

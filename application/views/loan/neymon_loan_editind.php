@@ -1,6 +1,5 @@
 <?php
 $this->load->view('loan/topmenu');
-print_r($basicinfo);
 ?>
 
 <div style="margin-top: 20px;" class="col-lg-12">
@@ -50,45 +49,48 @@ print_r($basicinfo);
 		<link href="<?php echo base_url(); ?>media/css/plugins/datapicker/datepicker3.css" rel="stylesheet"/>
 			<?php echo form_open_multipart(current_lang() . "/loan_3/loan_editing/" . $loanid, 'class="form-horizontal"'); ?>
 			<div style="color: brown;margin: 20px; font-weight: bold; font-size: 13px; border-bottom: 1px solid #ccc;">
-             <?php echo lang('loan_basic_info2'); ?>
+             <?php echo lang('loan_basic_info') ; ?>
             </div>
 		
-			<div class="form-group"><label class="col-lg-4 control-label"> <?=lang('member_type_id_number');?>  : <span class="required">*</span> </label>
+			<div class="form-group"><label class="col-lg-4 control-label"> <?=lang('loan_LID');?>  : <span class="required">*</span> </label>
                 <div class="col-lg-7">
-                    <input type="text" name="member_type_id_number" readonly value="<?php echo set_value('member_type_id_number',''); ?>"  id="member_type_id_number" class="form-control"/>
-                    <?php echo form_error('member_type_id_number'); ?>
+                    <input type="text" name="loan_LID" readonly value="<?=@$loaninfo->loan_id; ?>"  id="loan_LID" class="form-control"/>
+                    <?php echo form_error('loan_LID'); ?>
                 </div>
             </div>
-			
-		<div style="color: brown;margin: 20px; font-weight: bold; font-size: 13px; border-bottom: 1px solid #ccc;">
-            <?php echo lang('loan_basic_info'); ?>
-        </div>
 		
 		 <div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('requested_amount'); ?>  : <span class="required">*</span></label>
             <div class="col-lg-5">
-                <input type="text"  name="requested_amount"  value="<?php echo set_value('requested_amount'); ?>"  class="form-control amountformat"/>
+                <input type="text"  name="requested_amount"  value="<?=@$loaninfo->loan_amount; ?>"  class="form-control amountformat"/>
                 <?php echo form_error('requested_amount'); ?>
             </div>
 			<div class="col-lg-2">
-				<select class="form-control" name="rate" required>
-					<option >Select Rate</option>
-					<option value="10">10</option>
-					<option value="20">20</option>
-				</select>
+				<select name="rate" class="form-control" >
+                    <option value=""> <?php echo lang('select_default_text'); ?></option>
+                    <?php
+                    $loop = lang('rate_unitoption');
+                    $selected = $loaninfo->loan_rate;
+                    foreach ($loop as $key => $value) {
+						$sel =  ($selected ? ($selected == $key ? 'selected' : '') : '');
+                        ?>
+                        <option <?php echo $sel; ?> value="<?=$key; ?>"> <?php echo $value; ?></option>
+                    <?php }
+                    ?>
+                </select>
 				 <?php echo form_error('rate'); ?>
 			</div>
         </div>
 		
 		<div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('loan_installment'); ?>  : <span class="required">*</span></label>
 			<div class="col-lg-4">
-				<input type="text" class="form-control" name="installment" id="installment" value="<?=set_value('installment');?>">
+				<input type="text" class="form-control" name="installment" id="installment" value="<?=@$loaninfo->loan_period; ?>">
 				<?=form_error('installment'); ?>
 			</div>
 			<div class="col-lg-3">
 				<select name="installment_mark" class="form-control" id="installment_mark">
 					<option value=""> <?php echo lang('select_default_text'); ?></option>
 					<?php
-					$selected = set_value('installment_mark');
+					$selected = $loaninfo->loan_period_mark;
 					foreach ($loan_interval as $value) {
 						?>
 						<option <?php echo ($selected ? ($selected == $value->name ? 'selected="selected' : '') : ''); ?> value="<?=$value->name; ?>"> <?=$value->description; ?></option>
@@ -102,7 +104,7 @@ print_r($basicinfo);
 		<div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('loan_applicationdate'); ?>  : <span class="required">*</span></label>
             <div class=" col-lg-7">
                 <div class="input-group date datetimepicker" id="datetimepicker" >
-                    <input type="text" name="applicationdate" placeholder="<?php echo lang('hint_date'); ?>" value="<?php echo set_value('applicationdate'); ?>"  data-date-format="DD-MM-YYYY" class="form-control"/>
+                    <input type="text" name="applicationdate" placeholder="<?php echo lang('hint_date'); ?>" value="<?=@$loaninfo->loan_date;?>"  data-date-format="DD-MM-YYYY" class="form-control"/>
                     <span class="input-group-addon">
                         <span class="fa fa-calendar "></span>
                     </span>
@@ -113,21 +115,21 @@ print_r($basicinfo);
 		
 		<div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('amount_by_word'); ?>  : <span class="required">*</span></label>
             <div class="col-lg-7">
-                <textarea rows="3" name="amount_by_word" class="form-control" > <?php echo set_value('amount_by_word'); ?> </textarea>
+                <textarea rows="3" name="amount_by_word" class="form-control" > <?=@$loaninfo->amount_by_word;?> </textarea>
                 <?php echo form_error('amount_by_word'); ?>
             </div>
         </div>
 		
 		<div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('loan_purpose'); ?>  : <span class="required">*</span></label>
             <div class="col-lg-7">
-                <textarea rows="3" name="purpose" class="form-control" > <?php echo set_value('purpose'); ?> </textarea>
+                <textarea rows="3" name="purpose" class="form-control" > <?=@$loaninfo->dloan_purpose;?>  </textarea>
                 <?php echo form_error('purpose'); ?>
             </div>
         </div>
 		
 		<div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('grace_period'); ?>  : <span class="required">*</span></label>
             <div class="col-lg-4">
-                <input  type="text"  name="grace_period" value="<?php echo set_value('grace_period'); ?>"  class="form-control  amountformat" />
+                <input  type="text"  name="grace_period" value="<?=@$loaninfo->grace_period?>"  class="form-control  amountformat" />
                 <?php echo form_error('grace_period'); ?>
             </div>
             <div class="col-lg-3">
@@ -135,7 +137,7 @@ print_r($basicinfo);
                     <option value=""> <?php echo lang('select_default_text'); ?></option>
                     <?php
                     $loop = lang('grace_period_unitoption');
-                    $selected = set_value('grace_period_unit');
+                    $selected = @$loaninfo->grace_period_mark;
                     foreach ($loop as $key => $value) {
                         ?>
                         <option <?php echo ($selected ? ($selected == $key ? 'selected="selected' : '') : ''); ?> value="<?php echo $key; ?>"> <?php echo $value; ?></option>
