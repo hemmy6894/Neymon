@@ -20,7 +20,7 @@
             <tr>
                 <td><?php echo $value->loan_id;?></td>
                 <td style="text-align: center;"><?php 
-				$value->user_id = 1000003;
+				//$value->user_id = 1000003;
 				if($value->user_id != ""){
                 $info = $this->member_model->member_basic_info(null,$value->user_id)->row();
                 echo $info->member_id.' : '.$info->firstname.' '.$info->middlename.' '.$info->lastname; 

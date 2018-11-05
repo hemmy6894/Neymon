@@ -249,7 +249,7 @@ if (isset($message) && !empty($message)) {
         </div>
         <div class="panel-body">
             <div class="col-lg-6">
-                <?php echo form_open_multipart(current_lang() . "/loan/loan_evaluation_action/" . $loanid); ?>
+                <?php echo form_open_multipart(current_lang() . "/loan_3/loan_evaluation_action/" . $loanid); ?>
 
                 <label class="control-label"><?php echo lang('loan_status'); ?>  : <span class="required">*</span></label><br/>
 
