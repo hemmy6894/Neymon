@@ -25,8 +25,11 @@ ALTER TABLE `members_contact` CHANGE `contact_house` `contact_house` VARCHAR(300
 //
 ALTER TABLE `members_contact` ADD `contact_street` VARCHAR(300) NOT NULL AFTER `contact_city`, ADD `contact_ward` VARCHAR(300) NOT NULL AFTER `contact_street`;
 //day closed 29/10/2018 timeclosed(5:24PM)
+ALTER TABLE `members_grouplist` CHANGE `name` `company_name` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
 ALTER TABLE `members_grouplist` ADD `company_city` VARCHAR(300) NOT NULL AFTER `PIN`, ADD `company_distrit` VARCHAR(300) NOT NULL AFTER `company_city`, ADD `company_phone` VARCHAR(300) NOT NULL AFTER `company_distrit`, ADD `company_email` VARCHAR(300) NOT NULL AFTER `company_phone`, ADD `company_ward` VARCHAR(300) NOT NULL AFTER `company_email`, ADD `company_street` VARCHAR(120) NOT NULL AFTER `company_ward`;
-//open---30/10/2018--//
 
+
+ALTER TABLE `members`
+  DROP `type_id_number`;
 
 ?>

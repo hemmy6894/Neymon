@@ -44,7 +44,7 @@
                     $selected = $member_id;
                     foreach ($memberlist as $key => $value) {
                         ?>
-                        <option <?php echo ($selected ? ($selected == $value->member_id ? 'selected="selected"' : '') : ''); ?> value="<?php echo $value->member_id; ?>"> <?php echo $value->member_id . ' - ' . $value->firstname . ' ' . $value->middlename . ' ' . $value->lastname; ?></option>
+                        <option <?php echo ($selected ? ($selected == $value->memberid_type ? 'selected="selected"' : '') : ''); ?> value="<?php echo $value->memberid_type; ?>"> <?php echo $value->memberid_type . ' - ' . $value->firstname . ' ' . $value->middlename . ' ' . $value->lastname; ?></option>
                     <?php }
                     ?>
                 </select>

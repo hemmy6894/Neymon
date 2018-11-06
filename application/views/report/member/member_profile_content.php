@@ -36,7 +36,7 @@
             <div id="photo"><img src="<?php echo base_url() ?>uploads/memberphoto/<?php echo $memberinfo->photo; ?>"/></div>
             <div id="basic_info">
                 <label><?php echo lang('member_pid'); ?> : </label><?php echo $memberinfo->PID ?><br/>
-                <label><?php echo lang('member_member_id'); ?> : </label><?php echo $memberinfo->member_id ?><br/>
+                <label><?php echo lang('member_member_id'); ?> : </label><?php echo $memberinfo->memberid_type ?><br/>
                 <label><?php echo lang('member_firstname'); ?> : </label><?php echo $memberinfo->firstname ?><br/>
                 <label><?php echo lang('member_middlename'); ?> : </label><?php echo $memberinfo->middlename ?><br/>
                 <label><?php echo lang('member_lastname'); ?> : </label><?php echo $memberinfo->lastname ?><br/>
@@ -83,7 +83,7 @@
 <div style="text-align: center; border-top: 1px solid #000; padding-top: 10px;">
 			  <?php
 					$this->load->view('report/printer');
-					$data = site_url(current_lang() . '/report_member/member_profile_print/?member_id=' . $member_id);;
+					$data = site_url(current_lang() . '/report_member/member_profile_print/?member_id=' . $memberid_type);;
 					printingJavaScript($data)
 				?>
         </div>

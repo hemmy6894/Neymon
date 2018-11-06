@@ -69,8 +69,11 @@ $this->load->view('member/topmenu');
                                     <div id="user<?php echo $value->id; ?>" userid="<?php echo $value->id; ?>" class="innertxt">
 
                                         <ul>
-                                            <li style="color: blue;"><?php echo $value->name; ?></li>
-                                            <li><?php echo $value->description; ?></li>
+                                            <li style="color: blue;"><?php echo $value->company_name; ?></li>
+                                            <li><?php echo $value->company_city; ?></li>
+                                            <li><?php echo $value->company_slp; ?></li>
+                                            <li><?php echo $value->company_email; ?></li>
+                                            <li><?php echo $value->company_phone; ?></li>
                                             <li style="padding-top:5px;"><input type="checkbox" id="select<?php echo $value->id; ?>" value="<?php echo $value->id; ?>" class="selectit" /><label for="select<?php echo $value->id; ?>">&nbsp;&nbsp;<?php echo lang('select_it'); ?>.</label></li>
                                         </ul>
                                     </div>
@@ -98,8 +101,11 @@ $this->load->view('member/topmenu');
                                     <div id="user<?php echo $value->id; ?>" userid="<?php echo $value->id; ?>" class="innertxt2">
 
                                         <ul>
-                                            <li style="color: blue;"><?php echo $value->name; ?></li>
-                                            <li><?php echo $value->description; ?></li>
+                                            <li style="color: blue;"><?php echo $value->company_name; ?></li>
+                                            <li><?php echo $value->company_city; ?></li>
+                                            <li><?php echo $value->company_slp; ?></li>
+                                            <li><?php echo $value->company_email; ?></li>
+                                            <li><?php echo $value->company_phone; ?></li>
                                             <li style="padding-top:5px;"><input type="checkbox" id="select<?php echo $value->id; ?>" value="<?php echo $value->id; ?>" class="selectit" /><label for="select<?php echo $value->id; ?>">&nbsp;&nbsp;<?php echo lang('select_it'); ?>.</label></li>
                                         </ul>
                                     </div>

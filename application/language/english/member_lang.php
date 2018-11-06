@@ -56,7 +56,7 @@ $lang['member_edited_success'] = 'Client Information edited successfully';
 //link
 $lang['member_basic_info'] ='Basic Information';
 $lang['member_contact_info'] ='Contact Information';
-$lang['member_nextkin_info'] ='Next of Kin Information';
+$lang['member_nextkin_info'] ='Next of Referee  Information';
 
 //group group
 $lang['member_group_name'] = 'Group Name';
@@ -118,7 +118,7 @@ $lang['dhamana_group_btn']='add';
 
 ////
 
-$lang['nextkin_title'] = 'Next of Kin Information';
+$lang['nextkin_title'] = 'Next of Referee Information';
 $lang['nextkin_relationship'] = 'Relationship';
 $lang['nextkin_name'] = 'Full Name';
 

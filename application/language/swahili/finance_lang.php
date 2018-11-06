@@ -13,7 +13,7 @@ $lang['finance_account_is_header'] = 'is Header ?';
 $lang['YES'] = 'YES';
 $lang['NO'] = 'NO';
 $lang['btn_add_sub'] = 'Add sub';
-
+$lang['finance_amount_type'] = array('Diposite'=>'Credite','Withdraw'=>'Debit');
 $lang['finance_account_btncreate'] ='Create Account';
 $lang['finance_account_btnedit'] ='Edit Account';
 

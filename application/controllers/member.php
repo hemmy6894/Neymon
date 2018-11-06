@@ -198,7 +198,7 @@ class Member extends CI_Controller {
         if ($this->form_validation->run() == TRUE) {
 
             $new_group = array(
-                'name' => trim($this->input->post('company_name')),
+                'company_name' => trim($this->input->post('company_name')),
                 'company_slp' => trim($this->input->post('company_slp')),
                 'company_city' => trim($this->input->post('company_city')),
                 'company_distrit' => trim($this->input->post('company_distrit')),
@@ -777,7 +777,7 @@ class Member extends CI_Controller {
                         $array_insert = array(
                             'group_id' => $valuey,
                             'GID' => $gp->GID,
-                            'member_id' => $this->data['basicinfo']->member_id,
+                            'memberid_type' => $this->data['basicinfo']->memberid_type,
                             'PID' => $this->data['basicinfo']->PID,
                             'createdby' => $this->session->userdata('user_id'),
                             'PIN'=>  current_user()->PIN
