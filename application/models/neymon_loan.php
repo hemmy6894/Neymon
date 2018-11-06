@@ -22,7 +22,7 @@
 			}
 		}
 		
-		function edit($loanno = null, $loan = null, $dloan = null){
+		function edit($loanno = null, $loan = null, $dloan = null, $action_performed = null){
 			if(is_null($loanno)){
 				return "Loan no can't be empty";
 			}
@@ -34,7 +34,15 @@
 			if(is_null($dloan)){
 				return "Enter loan details to update";
 			}
-			$dloan['activities'] = $this->activities_create($activities);
+			if(is_null($action_performed)){
+				$action_performed = "Edited";
+			}
+			$dloan['activities'] = $this->neymon_loan->activities_create($action_performed,"neymon_loan_details",$loanno,"dloan_no");
+			
+			if($this->db->update("neymon_loan",$loan,array('loan_id' => $loanno))){
+				return $this->db->update("neymon_loan_details",$dloan,array('dloan_no' => $loanno));
+			}
+			return $this->db->error(); 
 		}
 		
 		function loan_info($loanid = null, $pin = null, $member_id = null) {
@@ -76,16 +84,25 @@
 				$all_data = $n == null ? array() : $n;
 			}
 			$count = count($all_data);
+			
+			$alld = array();
+			if($count){
+				foreach($all_data as $all){
+					$alld[] = json_decode($all->activities);
+				}
+			}
+			
+			$count = count($alld);
 			if($activities){
 				$time = date("Y-m-d H:i:s");
-				 $data = array(
+				 $data = (object)array(
 								"user" => current_user()->id,
 								"action_time" => $time,
 								"performed" => $activities
 							);
-				$data = json_encode($data);
-				$all_data[$count] = $data;
-				return $all_data;
+				$alld[$count] = $data;
+				//print_r($alld,false);
+				return json_encode($alld);
 			}else{
 				return "[]";
 			}

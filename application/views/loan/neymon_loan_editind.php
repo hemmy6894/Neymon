@@ -101,13 +101,10 @@ $this->load->view('loan/topmenu');
 			</div>
 		</div>
 		
-		<div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('loan_applicationdate'); ?>  : <span class="required">*</span></label>
+		<div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('loan_applicationdate'); ?> : <span class="required">*</span></label>
             <div class=" col-lg-7">
-                <div class="input-group date datetimepicker" id="datetimepicker" >
-                    <input type="text" name="applicationdate" placeholder="<?php echo lang('hint_date'); ?>" value="<?=@$loaninfo->loan_date;?>"  data-date-format="DD-MM-YYYY" class="form-control"/>
-                    <span class="input-group-addon">
-                        <span class="fa fa-calendar "></span>
-                    </span>
+                <div class="form-group">
+                    <input type="datetime-local" name="applicationdate" placeholder="<?php echo lang('hint_date'); ?>" value="<?=$loaninfo->loan_date;?>"  class="form-control"/>
                 </div>
                 <?php echo form_error('applicationdate'); ?>
             </div>

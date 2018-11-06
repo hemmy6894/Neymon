@@ -194,7 +194,10 @@
 			$LID = decode_id($loanid);
 			$info = $this->neymon_loan->loan_info($LID)->row();
 			
-			
+			if($this->input->post('requested_amount')){
+				 $_POST['requested_amount'] = str_replace(',','',$_POST['requested_amount']);
+				 $_POST['grace_period'] = str_replace(',','',$_POST['grace_period']);
+			}
 			$this->data['basicinfo'] = $this->member_model->member_basic_info(null, $info->user_id)->row();
 			$l = $this->data['loaninfo'] = $this->neymon_loan->loan_info($LID)->row();
 			$p = $this->data['paysource_list'] = $this->contribution_model->contribution_source()->result();
@@ -205,7 +208,7 @@
 			$this->form_validation->set_rules('rate', lang('rate'), 'required|numeric');
 			$this->form_validation->set_rules('installment', lang('loan_installment'), 'required|numeric');
 			$this->form_validation->set_rules('installment_mark', lang('loan_installment'), 'required');
-			$this->form_validation->set_rules('applicationdate', lang('loan_applicationdate'), 'required|valid_date');
+			$this->form_validation->set_rules('applicationdate', lang('loan_applicationdate'), 'required');
 			$this->form_validation->set_rules('amount_by_word', lang('amount_by_word'), 'required');
 			$this->form_validation->set_rules('purpose', lang('loan_purpose'), 'required');
 			$this->form_validation->set_rules('grace_period', lang('grace_period'), 'required|numeric');
@@ -229,11 +232,21 @@
 						);
 						
 					$dloan_no = $this->input->post('loan_LID');
-					$this->neymon_loan->activities_create("Hemedi","neymon_loan_details",$dloan_no,"dloan_no");
+					
+					if($this->neymon_loan->edit($dloan_no,$loan_update,$loan_details_update)){
+						$this->data['success'] = "Inserted Succesfull";
+					}
 				}else{
+					print_r(form_error('loan_LID'));
+					print_r(form_error('requested_amount'));
+					print_r(form_error('rate'));
 					print_r(form_error('installment'));
 					print_r(form_error('installment_mark'));
 					print_r(form_error('applicationdate'));
+					print_r(form_error('amount_by_word'));
+					print_r(form_error('purpose'));
+					print_r(form_error('grace_period'));
+					print_r(form_error('grace_period_unit'));
 				}
 				die();
 			}
