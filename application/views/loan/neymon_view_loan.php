@@ -12,7 +12,7 @@ if (isset($message) && !empty($message)) {
 }
 
 							class dataClass{
-								public $member_id = "";
+								public $memberid_type = "";
 								public $firstname = "";
 								public $middlename = "";
 								public $lastname = "";
@@ -65,7 +65,7 @@ if (isset($message) && !empty($message)) {
 							$info = new dataClass();//(object)array('member_id' => "",'firstname' => '', 'middlename' => '', 'lastname' => '');
 						}
 							
-							echo $info->member_id.'  '.$info->firstname.' '.$info->middlename.' '.$info->lastname; 
+							echo $info->memberid_type.'  '.$info->firstname.' '.$info->middlename.' '.$info->lastname; 
 						
 					?>
 				</td>
@@ -84,7 +84,7 @@ if (isset($message) && !empty($message)) {
                  if($value->evaluated == 0){
                  ?>
                      
-                 |<a onClick="return pushtoevaluation('<?php echo base_url().'index.php/'.current_lang() . "/loan/push_to_evaluation/".encode_id($value->loan_id) ?>','<?php echo $value->loan_id; ?>' ,'<?php echo '  '.$info->member_id.' : '.$info->firstname.' '.$info->middlename.' '.$info->lastname; ?>')" ><i class="fa fa-arrow-right"></i> <?php echo lang('button_pushtoevaluation'); ?> </a>
+                 |<a onClick="return pushtoevaluation('<?php echo base_url().'index.php/'.current_lang() . "/loan/push_to_evaluation/".encode_id($value->loan_id) ?>','<?php echo $value->loan_id; ?>' ,'<?php echo '  '.$info->memberid_type.' : '.$info->firstname.' '.$info->middlename.' '.$info->lastname; ?>')" ><i class="fa fa-arrow-right"></i> <?php echo lang('button_pushtoevaluation'); ?> </a>
                  <?php } ?>
                  </td>
             </tr>

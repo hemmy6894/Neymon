@@ -11,7 +11,7 @@ $this->load->view('loan/topmenu');
             <?php echo lang('member_pid') ?> : <?php echo $basicinfo->PID; ?>
         </div>
         <div style="display: block;  margin-top: 5px; font-size: 15px;">
-            <?php echo lang('member_member_id') ?> : <?php echo $basicinfo->member_id; ?>
+            <?php echo lang('member_member_id') ?> : <?php echo $basicinfo->memberid_type; ?>
         </div>
          <?php if($basicinfo->category == "Company"){ ?>
         <div style="display: block;  margin-top: 5px; font-size: 15px;">

@@ -23,7 +23,7 @@
 				//$value->user_id = 1000003;
 				if($value->user_id != ""){
                 $info = $this->member_model->member_basic_info(null,$value->user_id)->row();
-                echo $info->member_id.' : '.$info->firstname.' '.$info->middlename.' '.$info->lastname; 
+                echo $info->memberid_type.' : '.$info->firstname.' '.$info->middlename.' '.$info->lastname; 
 				}
 				?></td>
                 <td style="text-align: right;"><?php echo number_format($value->loan_amount,2) ?></td>
