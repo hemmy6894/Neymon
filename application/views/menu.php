@@ -39,6 +39,14 @@ $activefunction = ($this->uri->segment(3)) ? $this->uri->segment(3) : 'X';
                             <?php if (has_role(1, 'View_member_group')) { ?>
                                 <li class="<?php echo ($activefunction == 'member_group_list' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/member/member_group_list'); ?>"><?php echo lang('member_group_list'); ?></a></li>
                             <?php } ?>
+                            <!--open-->
+                            <?php if (has_role(1, 'View_dhamana_group')) { ?>
+                                <li class="<?php echo ($activefunction == 'member_group_list' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/member/create_dhamana'); ?>"><?php echo lang('create_dhamana'); ?></a></li>
+                            <?php } ?>
+                            <?php if (has_role(1, 'View_company_group')) { ?>
+                                <li class="<?php echo ($activefunction == 'member_group_list' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/member/create_dhamana'); ?>"><?php echo lang('create_dhamana'); ?></a></li>
+                            <?php } ?>
+                            <!--closed-->
                         </ul>
                     </li>
                 <?php } ?>
@@ -89,7 +97,7 @@ $activefunction = ($this->uri->segment(3)) ? $this->uri->segment(3) : 'X';
                             <?php } ?>
                             <?php if (has_role(6, 'Manage_supplier')) { ?>
                                 <li class="<?php echo ($activefunction == 'supplier_list' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/supplier/supplier_list'); ?>"><?php echo lang('supplier_list'); ?></a></li>
-                            <?php } ?> 
+                            <?php } ?>
                             <?php if (has_role(6, 'Create_purchase_orders')) { ?>
                                 <li class="<?php echo ($activefunction == 'supplier_purchase_order' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/supplier/supplier_purchase_order'); ?>"><?php echo lang('supplier_purchase_order'); ?></a></li>
                             <?php } ?>
@@ -178,8 +186,8 @@ $activefunction = ($this->uri->segment(3)) ? $this->uri->segment(3) : 'X';
                             <li class="<?php echo ($activefunction == 'import_loan' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/import/import_loan') ?>"><?php echo 'Import Loan Information'; ?></a></li>
                             <li class="<?php echo ($activefunction == 'import_repayment' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/import/import_repayment') ?>"><?php echo 'Import Loan Repayment Schedule'; ?></a></li>
                             <li class="<?php echo ($activefunction == 'import_repay_trans' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/import/import_repay_trans') ?>"><?php echo 'Import Loan Repayment Transactions'; ?></a></li>
-                        
-                        
+
+
                     </ul>
                 </li>-->
 

@@ -9,7 +9,7 @@ $this->load->view('member/topmenu');
             <?php echo lang('member_pid') ?> : <?php echo $basicinfo->PID; ?>
         </div>
         <div style="display: block;  margin-top: 5px; font-size: 15px;">
-            <?php echo lang('member_member_id') ?> : <?php echo $basicinfo->member_id; ?>
+            <?php echo lang('member_type_id_number') ?> : <?php echo $basicinfo->memberid_type; ?>
         </div>
         <?php if($basicinfo->category == "Company"){ ?>
         <div style="display: block;  margin-top: 5px; font-size: 15px;">
@@ -78,29 +78,42 @@ $this->load->view('member/topmenu');
                 <?php echo form_error('phone2'); ?>
             </div>
         </div>
-         <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_contact_fax'); ?>  : </label>
-            <div class="col-lg-6">
-                <input type="text" name="fax" value="<?php echo $contactinfo->fax; ?>"  class="form-control"/> 
-                <?php echo form_error('fax'); ?>
-            </div>
-        </div>
-        <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_contact_email'); ?>  : </label>
-            <div class="col-lg-6">
-                <input type="text" name="email" value="<?php echo $contactinfo->email; ?>"  class="form-control"/> 
-                <?php echo form_error('email'); ?>
-            </div>
-        </div>
         <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_contact_box'); ?>  : </label>
             <div class="col-lg-6">
                 <input type="text" name="box" value="<?php echo $contactinfo->postaladdress; ?>"  class="form-control"/> 
                 <?php echo form_error('box'); ?>
             </div>
         </div>
-
-        <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_contact_physical'); ?>  : </label>
+         <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_contact_house'); ?>  : </label>
             <div class="col-lg-6">
-                <input type="text" name="physical" value="<?php echo $contactinfo->physicaladdress; ?>"  class="form-control"/> 
-                <?php echo form_error('physical'); ?>
+                <input type="text" name="contact_house" value="<?php echo $contactinfo->contact_house; ?>"  class="form-control"/> 
+                <?php echo form_error('contact_house'); ?>
+            </div>
+        </div>
+        <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_contact_city'); ?>  :<span class="required">*</span> </label>
+            <div class="col-lg-6">
+                <input type="text" name="contact_city" value="<?php echo $contactinfo->contact_city; ?>"  class="form-control"/> 
+                <?php echo form_error('contact_city'); ?>
+            </div>
+        </div>
+       
+
+        <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_contact_district'); ?>  :<span class="required">*</span> </label>
+            <div class="col-lg-6">
+                <input type="text" name="contact_district" value="<?php echo $contactinfo->contact_district; ?>"  class="form-control"/> 
+                <?php echo form_error('contact_district'); ?>
+            </div>
+        </div>
+        <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_contact_ward'); ?>  :<span class="required">*</span> </label>
+            <div class="col-lg-6">
+                <input type="text" name="contact_ward" value="<?php echo $contactinfo->contact_ward; ?>"  class="form-control"/> 
+                <?php echo form_error('contact_ward'); ?>
+            </div>
+        </div>
+        <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_contact_street'); ?>  :<span class="required">*</span> </label>
+            <div class="col-lg-6">
+                <input type="text" name="contact_street" value="<?php echo $contactinfo->contact_street; ?>"  class="form-control"/> 
+                <?php echo form_error('contact_street'); ?>
             </div>
         </div>
 

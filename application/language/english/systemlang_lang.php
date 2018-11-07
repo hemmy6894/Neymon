@@ -57,7 +57,7 @@ $lang['contribution_minimum_fail'] = 'Fail to save information';
 //members link
 $lang['members_home'] = 'Client Registration';
 $lang['member_registration'] = 'Register New Client';
-$lang['member_add_group'] = 'Add New Client Group';
+$lang['member_add_group'] = 'Add Company';
 $lang['member_list'] = 'Client List';
 $lang['member_active'] = 'Active';
 $lang['member_inactive'] = 'Inactive';
@@ -71,7 +71,7 @@ $lang['row_per_page'] = 'Row per page';
 $lang['hint_date'] = 'DD-MM-YYYY';
 
 //assign previllege in group
-$lang['privillege_heading'] = 'Group Privillege';
+$lang['privillege_heading'] = 'Company Privillege';
 $lang['privillege_btn_save'] = 'Assign Previllege';
 $lang['module'] = 'Module';
 $lang['privillege_settings_success'] = 'Privillege successfully configured';
@@ -83,8 +83,8 @@ $lang['finance_account_list'] = 'Account Chart List';
 
 $lang['account_no'] = 'Account Number';
 $lang['member_pid'] = 'System Client ID';
-$lang['group_id'] = 'Group ID';
-$lang['member_group_list'] = 'Client Group List';
+$lang['group_id'] = 'Company ID';
+$lang['member_group_list'] = 'Client Company List';
 $lang['data_not_found'] = 'No data found';
 
 //saccoss accounts

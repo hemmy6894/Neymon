@@ -61,7 +61,7 @@ if (isset($message) && !empty($message)) {
                 ?>
                 <input type="checkbox" <?php echo (in_array($key, $array_column) ? 'checked="checked"':''); ?> name="column[]" value="<?php echo $key ?>" class="checkbox-inline"/><?php echo $value; ?>
             <?php } ?>
-            <div style="font-weight: bold; border-bottom: 1px solid #ccc; padding-top: 10px;">Next of Kin Information</div>
+            <div style="font-weight: bold; border-bottom: 1px solid #ccc; padding-top: 10px;">Next of Referee  Information</div>
             <?php
             foreach ($column_list[2] as $key => $value) {
                 ?>
