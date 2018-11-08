@@ -257,7 +257,7 @@ if (isset($message) && !empty($message)) {
                     <option value=""><?php echo lang('select_default_text'); ?></option>
                     <?php
                     $selected = set_value('status');
-                    $paysource_list = array('1' => 'Evaluated', '3' => 'Need some information', '2' => 'Rejected');
+                    $paysource_list = array('EVALUATED' => 'Evaluated', 'NEED_INFO' => 'Need some information', 'REJECTED' => 'Rejected');
                     foreach ($paysource_list as $key => $value) {
                         ?>
                         <option <?php echo ($key == $selected ? 'selected="selected"' : ''); ?> value="<?php echo $key; ?>"><?php echo $value; ?></option>

@@ -56,22 +56,22 @@ $activefunction = ($this->uri->segment(3)) ? $this->uri->segment(3) : 'X';
                         <a href="#"><i class="fa fa-book"></i> <span class="nav-label"><?php echo lang('page_loan'); ?></span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <?php if (has_role(5, 'View_loan_list')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_viewlist' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_viewlist'); ?>"><?php echo lang('loan_viewlist').' ('.current_new_loan().')'; ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_viewlist' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_viewlist'); ?>"><?php echo lang('loan_viewlist').' ('.current_new_loan().')'; ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Create_new_loan')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_application' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_application'); ?>"><?php echo lang('loan_application'); ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_application' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_application'); ?>"><?php echo lang('loan_application'); ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Evaluate_loan')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_evaluation' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_evaluation'); ?>"><?php echo lang('loan_evaluation').' ('.current_loan_toevaluate().')'; ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_evaluation' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_evaluation'); ?>"><?php echo lang('loan_evaluation').' ('.current_loan_toevaluate().')'; ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Approve_loan')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_approval' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_approval'); ?>"><?php echo lang('loan_approval').' ('.current_loan_toapprove().')'; ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_approval' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_approval'); ?>"><?php echo lang('loan_approval').' ('.current_loan_toapprove().')'; ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Disburse_loan')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_disbursement' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_disbursement'); ?>"><?php echo lang('loan_disbursement').' ('.current_loan_todisburse().')'; ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_disbursement' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_disbursement'); ?>"><?php echo lang('loan_disbursement').' ('.current_loan_todisburse().')'; ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Loan_repayment')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_repayment' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_repayment'); ?>"><?php echo lang('loan_repayment'); ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_repayment' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_repayment'); ?>"><?php echo lang('loan_repayment'); ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'automatic_repayment_process')) { ?>
                                 <!-- <li class="<?php echo ($activefunction == 'automatic_repayment_process' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/automatic_repayment_process'); ?>"><?php echo 'Automatic Loan Repayment'; ?></a></li>-->

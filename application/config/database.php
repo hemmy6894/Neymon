@@ -51,11 +51,7 @@ $active_record = TRUE;
 $db['default']['hostname'] = 'localhost:3306';
 $db['default']['username'] = 'root';
 $db['default']['password'] = "";//'tea*100%';
-<<<<<<< HEAD
 $db['default']['database'] = 'mkomevudb';
-=======
-$db['default']['database'] = 'tea';
->>>>>>> yona
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

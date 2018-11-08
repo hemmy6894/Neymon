@@ -18,15 +18,15 @@ $this->load->view('member/topmenu');
 <?php echo form_open_multipart(current_lang() . "/member/memberinfo/".  encode_id($basicinfo->id), 'class="form-horizontal"'); ?>
 
 <?php
-if (isset($message) && !empty($message)) {
-    echo '<div class="label label-info displaymessage">' . $message . '</div>';
-} else if ($this->session->flashdata('message') != '') {
-    echo '<div class="label label-info displaymessage">' . $this->session->flashdata('message') . '</div>';
-} else if (isset($warning) && !empty($warning)) {
-    echo '<div class="label label-danger displaymessage">' . $warning . '</div>';
-} else if ($this->session->flashdata('warning') != '') {
-    echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
-}
+	if (isset($message) && !empty($message)) {
+		echo '<div class="label label-info displaymessage">' . $message . '</div>';
+	} else if ($this->session->flashdata('message') != '') {
+		echo '<div class="label label-info displaymessage">' . $this->session->flashdata('message') . '</div>';
+	} else if (isset($warning) && !empty($warning)) {
+		echo '<div class="label label-danger displaymessage">' . $warning . '</div>';
+	} else if ($this->session->flashdata('warning') != '') {
+		echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
+	}
 ?>
 
 <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_type_id_number'); ?>  : </label>

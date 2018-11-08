@@ -37,7 +37,7 @@
 			if(is_null($action_performed)){
 				$action_performed = "Edited";
 			}
-			$dloan['activities'] = $this->neymon_loan->activities_create($action_performed,"neymon_loan_details",$loanno,"dloan_no");
+			$dloan['activities'] = $this->activities_create($action_performed,"neymon_loan_details",$loanno,"dloan_no");
 			
 			if($this->db->update("neymon_loan",$loan,array('loan_id' => $loanno))){
 				return $this->db->update("neymon_loan_details",$dloan,array('dloan_no' => $loanno));
@@ -66,6 +66,35 @@
 			return $this->db->query("SELECT * FROM neymon_loan as nl INNER JOIN neymon_loan_details as nld ON nl.loan_id = nld.dloan_no AND PIN='$pin' AND (d_loan_status = 'NEW' OR d_loan_status = 'EVALUATE') AND evaluated = 0 ORDER BY loan_date DESC")->result();
 		}
 	
+		function evaluate_loan($loanno,$evaluation,$comment){
+			$curuser = current_user();
+			
+			$loan_contract_evaluation = array(
+				'LID' => $loanno,
+				'status' => 1,
+				'comment' => $comment,
+				'createdby' => $curuser->id,
+				'PIN' => $curuser->PIN
+			);
+			
+			$loan_details = array(
+				'd_loan_status' => $evaluation
+			);
+			$loan_details['activities'] = $this->activities_create($comment,"neymon_loan_details",$loanno,"dloan_no");
+			//die();
+			//$this->db->select("*");
+			//$this->db->where(array("LID" => $loanno));
+			//$state_evaluation = $this->db->get('loan_contract_evaluation');
+			//if($state_evaluation->num_rows() < 1){
+				if($this->db->insert('loan_contract_evaluation',$loan_contract_evaluation)){
+					return $this->db->update('neymon_loan_details',$loan_details,array('dloan_no' => $loanno));
+				}else{
+					return 0;
+				}
+			//}else{
+			//	return 2;
+			//}
+		}
 		
 		function view($loan = null,$limit = null, $start = null){
 			if(!is_null($loan)){
@@ -89,9 +118,9 @@
 			if($count){
 				foreach($all_data as $all){
 					$alld[] = json_decode($all->activities);
+					$alld = $alld[0];
 				}
 			}
-			
 			$count = count($alld);
 			if($activities){
 				$time = date("Y-m-d H:i:s");

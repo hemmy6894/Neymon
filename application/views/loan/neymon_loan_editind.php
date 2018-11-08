@@ -3,7 +3,17 @@ $this->load->view('loan/topmenu');
 ?>
 
 <div style="margin-top: 20px;" class="col-lg-12">
-    
+ <?php
+	if (isset($message) && !empty($message)) {
+		echo '<div class="label label-info displaymessage">' . $message . '</div>';
+	} else if ($this->session->flashdata('message') != '') {
+		echo '<div class="label label-info displaymessage">' . $this->session->flashdata('message') . '</div>';
+	} else if (isset($warning) && !empty($warning)) {
+		echo '<div class="label label-danger displaymessage">' . $warning . '</div>';
+	} else if ($this->session->flashdata('warning') != '') {
+		echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
+	}
+ ?>   
     
      <div class="col-lg-3">
         <img src="<?php echo base_url() ?>uploads/memberphoto/<?php echo $basicinfo->photo; ?>" style="width: 150px; height: 170px; border: 1px solid #ccc;"/>
@@ -101,10 +111,13 @@ $this->load->view('loan/topmenu');
 			</div>
 		</div>
 		
-		<div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('loan_applicationdate'); ?> : <span class="required">*</span></label>
+		<div class="form-group"><label class="col-lg-4 control-label"><?php echo lang('loan_applicationdate'); ?>  : <span class="required">*</span></label>
             <div class=" col-lg-7">
-                <div class="form-group">
-                    <input type="datetime-local" name="applicationdate" placeholder="<?php echo lang('hint_date'); ?>" value="<?=$loaninfo->loan_date;?>"  class="form-control"/>
+                <div class="input-group date datetimepicker" id="datetimepicker" >
+                    <input type="text" name="applicationdate" placeholder="<?php echo lang('hint_date'); ?>" value="<?=$loaninfo->loan_date;?>"  data-date-format="YYYY-MM-DD" class="form-control"/>
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar "></span>
+                    </span>
                 </div>
                 <?php echo form_error('applicationdate'); ?>
             </div>
