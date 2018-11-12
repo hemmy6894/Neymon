@@ -7,6 +7,7 @@
 				redirect('auth/login', 'refresh');
 			}
 			$this->data['current_title'] = lang('page_loan');
+			$this->data['base_url'] = site_url('en/loan_3/loan_payment_display');
 			$this->lang->load('member');
 			$this->lang->load('finance');
 			$this->lang->load('loan');
@@ -188,6 +189,26 @@
 			$this->load->view('template', $this->data);
 		}
 	
+		function loan_repayment(){
+			$this->data['loanlist'] = $this->neymon_loan->loan_repay_list();
+			$this->data['content'] = 'loan/neymon_loan_repayment';
+			$this->load->view('template', $this->data);
+		}
+		
+		function loan_payment_display($loanid = null){
+			if(!is_null($loanid)){
+				$datas = $this->data['loaninfo'] = $this->neymon_loan->loan_info($loanid)->row();
+				
+				
+				$this->data['function_view'] = function(){
+					return $this->view_calculator($datas->calculation,"edit");
+				};
+				
+				print_r($this->view_calculator($datas->calculation,"edit"));
+			}else{
+				echo "Loan not found";
+			}
+		}
 		function loan_business($loanid) {
 			$this->data['loanid'] = $loanid;
 			$LID = decode_id($loanid);
@@ -280,10 +301,7 @@
 			
 		}
 	
-		function loan_repayment($loanno){
-			
-		}
-	
+		
 		function loan_editing($loanid) {
 			$this->data['loanid'] = $loanid;
 			$LID = decode_id($loanid);
@@ -293,8 +311,6 @@
 				 $_POST['requested_amount'] = str_replace(',','',$_POST['requested_amount']);
 				 $_POST['grace_period'] = str_replace(',','',$_POST['grace_period']);
 			}
-			
-			
 			$this->form_validation->set_rules('loan_LID', lang('loan_LID'), 'required');
 			$this->form_validation->set_rules('requested_amount', lang('requested_amount'), 'required');
 			$this->form_validation->set_rules('rate', lang('rate'), 'required|numeric');
@@ -349,6 +365,7 @@
 				$calculator = json_decode($calculator);
 			}else{
 				$action = "";
+				$calculator = json_decode($calculator);
 			}
 			?>
 				<table border="1" cellspacing="2" cellpadding="5" class="table" width="80%">
@@ -406,7 +423,7 @@
 				$calculator[$i]['principle_payment'] = $principle_payment;
 				$calculator[$i]['interest'] = $interest2;
 				$calculator[$i]['month_pay'] = $month_pay;
-				$calculator[$i]['month_remain_balance'] = $month_remain_balance;
+				$calculator[$i]['month_remain_balance'] = $month_remain_balance < 0 ? "($month_remain_balance)" :  $month_remain_balance;
 				$calculator[$i]['outstanding'] = $outstanding;
 				$i++;
 				$principal = $outstanding;

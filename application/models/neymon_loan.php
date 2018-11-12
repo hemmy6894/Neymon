@@ -66,6 +66,14 @@
 			return $this->db->query("SELECT * FROM neymon_loan as nl INNER JOIN neymon_loan_details as nld ON nl.loan_id = nld.dloan_no AND PIN='$pin' AND (d_loan_status = 'NEW' OR d_loan_status = 'EVALUATE') AND evaluated = 0 ORDER BY loan_date DESC")->result();
 		}
 	
+		function loan_repay_list() {
+			$pin = current_user()->PIN;
+			$this->db->select("neymon_loan.*,members.firstname,members.middlename,members.lastname");
+			$this->db->join("neymon_loan_details","neymon_loan_details.dloan_no = neymon_loan.loan_id");
+			$this->db->join("members","neymon_loan.user_id = members.PID");
+			$this->db->where(array("neymon_loan.PIN" => $pin));
+			return $this->db->get("neymon_loan")->result();
+		}
 		function evaluate_loan($loanno,$evaluation,$comment){
 			$curuser = current_user();
 			
