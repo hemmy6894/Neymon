@@ -189,8 +189,6 @@
 			$this->load->view('template', $this->data);
 		}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
 		function loan_repayment(){
 			$this->data['loanlist'] = $this->neymon_loan->loan_repay_list();
 			$this->data['content'] = 'loan/neymon_loan_repayment';
@@ -211,13 +209,7 @@
 				echo "Loan not found";
 			}
 		}
-		function loan_editing($loanid) {
-=======
 		function loan_business($loanid) {
->>>>>>> 736c3b096751c21a863aaf634533568ae460599e
-=======
-		function loan_business($loanid) {
->>>>>>> 736c3b096751c21a863aaf634533568ae460599e
 			$this->data['loanid'] = $loanid;
 			$LID = decode_id($loanid);
 
@@ -306,14 +298,10 @@
 	
 	
 		function loan_disbursement(){
-<<<<<<< HEAD
 			
 		}
 	
-		function loan_repayment($loanno){
-			
-		}
-	
+		
 		function loan_editing($loanid) {
 			$this->data['loanid'] = $loanid;
 			$LID = decode_id($loanid);
@@ -323,28 +311,6 @@
 				 $_POST['requested_amount'] = str_replace(',','',$_POST['requested_amount']);
 				 $_POST['grace_period'] = str_replace(',','',$_POST['grace_period']);
 			}
-			
-			
-=======
-			
-		}
-	
-		function loan_repayment($loanno){
-			
-		}
-	
-		function loan_editing($loanid) {
-			$this->data['loanid'] = $loanid;
-			$LID = decode_id($loanid);
-			
-			
-			if($this->input->post('requested_amount')){
-				 $_POST['requested_amount'] = str_replace(',','',$_POST['requested_amount']);
-				 $_POST['grace_period'] = str_replace(',','',$_POST['grace_period']);
-			}
-			
-			
->>>>>>> 736c3b096751c21a863aaf634533568ae460599e
 			$this->form_validation->set_rules('loan_LID', lang('loan_LID'), 'required');
 			$this->form_validation->set_rules('requested_amount', lang('requested_amount'), 'required');
 			$this->form_validation->set_rules('rate', lang('rate'), 'required|numeric');
