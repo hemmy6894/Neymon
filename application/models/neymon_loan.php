@@ -67,6 +67,7 @@
 		}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 		function loan_repay_list() {
 			$pin = current_user()->PIN;
 			$this->db->select("neymon_loan.*,members.firstname,members.middlename,members.lastname");
@@ -75,6 +76,8 @@
 			$this->db->where(array("neymon_loan.PIN" => $pin));
 			return $this->db->get("neymon_loan")->result();
 =======
+=======
+>>>>>>> 736c3b096751c21a863aaf634533568ae460599e
 		function evaluate_loan($loanno,$evaluation,$comment){
 			$curuser = current_user();
 			
@@ -103,6 +106,9 @@
 			//}else{
 			//	return 2;
 			//}
+<<<<<<< HEAD
+>>>>>>> 736c3b096751c21a863aaf634533568ae460599e
+=======
 >>>>>>> 736c3b096751c21a863aaf634533568ae460599e
 		}
 		
