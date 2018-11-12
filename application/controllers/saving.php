@@ -436,14 +436,14 @@ class Saving extends CI_Controller {
             //$value = $this->input->post('term['term']');
             $value = $_POST['term']['term'];
 
-            $clients = $this->db->query("SELECT * FROM members WHERE PID LIKE '%$value%' OR  member_id LIKE '%$value%' 
+            $clients = $this->db->query("SELECT * FROM members WHERE PID LIKE '%$value%' OR  memberid_type LIKE '%$value%' 
                                           OR firstname LIKE '%$value%' OR lastname LIKE '%$value%' LIMIT 15")->result();
 
             $arr1 = array();
             foreach ($clients as $client){
                 $arr2 = array();
                 $arr2['id']=$client->PID;
-                $arr2['text']=$client->firstname.' '.$client->lastname.'(ID:'.$client->member_id.')';
+                $arr2['text']=$client->firstname.' '.$client->lastname.'(ID:'.$client->memberid_type.')';
                 $arr1[] = $arr2;
             }
             echo json_encode($arr1);

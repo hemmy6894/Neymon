@@ -50,7 +50,7 @@ if (isset($message) && !empty($message)) {
                         </div></td>
                     <td valign="top"><div style="padding-left: 40px;">
                             <strong><?php echo lang('member_pid') ?> : </strong> <?php echo $memberinfo->PID; ?><br/>
-                            <strong><?php echo lang('member_member_id') ?> : </strong> <?php echo $memberinfo->member_id; ?><br/>
+                            <strong><?php echo lang('member_member_id') ?> : </strong> <?php echo $memberinfo->memberid_type; ?><br/>
                             <strong><?php echo lang('member_join_date') ?> : </strong> <?php echo format_date($memberinfo->joiningdate, FALSE); ?><br/>
                         </div></td>
 

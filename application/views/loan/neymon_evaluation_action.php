@@ -46,7 +46,7 @@ if (isset($message) && !empty($message)) {
                         </div></td>
                     <td valign="top"><div style="padding-left: 40px;">
                             <strong><?php echo lang('member_user_id') ?> : </strong> <?php echo $memberinfo->PID; ?><br/>
-                            <strong><?php echo lang('member_member_id') ?> : </strong> <?php echo $memberinfo->member_id; ?><br/>
+                            <strong><?php echo lang('member_member_id') ?> : </strong> <?php echo $memberinfo->memberid_type; ?><br/>
                             <strong><?php echo lang('member_join_date') ?> : </strong> <?php echo format_date($memberinfo->joiningdate, FALSE); ?><br/>
                         </div></td>
 
@@ -242,7 +242,7 @@ if (isset($message) && !empty($message)) {
             <h4 style="display: inline-block;"><?php echo lang('evaluation_comment'); ?></h4>
             <div class="col-lg-3" style="float: right; margin-top: 5px;">
                  <?php if ($loaninfo->edited == 1) {                                    
-                     echo anchor(current_lang().'/loan/loan_editing/'.$loanid,  lang('loan_edit')); 
+                     echo anchor(current_lang().'/loan_3/loan_editing/'.$loanid,  lang('loan_edit')); 
                      
                  } ?>
             </div>
@@ -257,7 +257,7 @@ if (isset($message) && !empty($message)) {
                     <option value=""><?php echo lang('select_default_text'); ?></option>
                     <?php
                     $selected = set_value('status');
-                    $paysource_list = array('1' => 'Evaluated', '3' => 'Need some information', '2' => 'Rejected');
+                    $paysource_list = array('EVALUATED' => 'Evaluated', 'NEED_INFO' => 'Need some information', 'REJECTED' => 'Rejected');
                     foreach ($paysource_list as $key => $value) {
                         ?>
                         <option <?php echo ($key == $selected ? 'selected="selected"' : ''); ?> value="<?php echo $key; ?>"><?php echo $value; ?></option>

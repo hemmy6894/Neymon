@@ -104,18 +104,20 @@
                 </div>
             </div>
         </div>
-        <div class="row"  >
-            <div class="col-lg-12">
-                <div class="footer">
-                    <div class="pull-right">
-                        <strong><?php echo lang('software_name'); ?></strong>
-                    </div>
-                    <div>
-                        <strong>&copy; NEYMON INVESTMENT LIMITED  <?php echo date('Y'); ?> </strong>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<footer style="position:absolute;bottom:0px;width:95%">
+			<div class="row" >
+				<div class="col-lg-12">
+					<div class="footer">
+						<div class="pull-right">
+							<strong><?php echo lang('software_name'); ?></strong>
+						</div>
+						<div>
+							<strong>&copy; NEYMON INVESTMENT LIMITED  <?php echo date('Y'); ?> </strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
     </div>
 </div>
 <script>

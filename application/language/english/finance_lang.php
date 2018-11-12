@@ -8,6 +8,8 @@
 $lang['finance_account_create'] = 'Create New Account Chart';
 $lang['finance_account_name'] = 'Account Name';
 $lang['finance_account_type'] = 'Account Type';
+$lang['finance_type'] = 'Deposite Type';
+$lang['finance_amount'] = 'Amount';
 $lang['finance_account_description'] = 'Description';
 $lang['finance_account_is_header'] = 'is Header ?';
 $lang['YES'] = 'YES';

@@ -18,57 +18,23 @@ $this->load->view('member/topmenu');
 <?php echo form_open_multipart(current_lang() . "/member/memberinfo/".  encode_id($basicinfo->id), 'class="form-horizontal"'); ?>
 
 <?php
-if (isset($message) && !empty($message)) {
-    echo '<div class="label label-info displaymessage">' . $message . '</div>';
-} else if ($this->session->flashdata('message') != '') {
-    echo '<div class="label label-info displaymessage">' . $this->session->flashdata('message') . '</div>';
-} else if (isset($warning) && !empty($warning)) {
-    echo '<div class="label label-danger displaymessage">' . $warning . '</div>';
-} else if ($this->session->flashdata('warning') != '') {
-    echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
-}
+	if (isset($message) && !empty($message)) {
+		echo '<div class="label label-info displaymessage">' . $message . '</div>';
+	} else if ($this->session->flashdata('message') != '') {
+		echo '<div class="label label-info displaymessage">' . $this->session->flashdata('message') . '</div>';
+	} else if (isset($warning) && !empty($warning)) {
+		echo '<div class="label label-danger displaymessage">' . $warning . '</div>';
+	} else if ($this->session->flashdata('warning') != '') {
+		echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
+	}
 ?>
 
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_member_id'); ?>  : </label>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_type_id_number'); ?>  : </label>
     <div class="col-lg-6">
-        <input type="text" disabled="disabled"  name="memberid" value="<?php echo $basicinfo->member_id; ?>"  class="form-control"/> 
+        <input type="text" disabled="disabled"  name="memberid" value="<?php echo $basicinfo->memberid_type; ?>"  class="form-control"/> 
         <?php echo form_error('memberid'); ?>
     </div>
 </div>
-<?php if($basicinfo->category == "Company"){ ?>
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('companyname'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
-        <input type="text" name="companyname" value="<?php echo $basicinfo->firstname; ?>"  class="form-control"/> 
-        <?php echo form_error('companyname'); ?>
-    </div>
-</div>
-
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_type_id_tin'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
-        <input type="text" name="type_id_tin" value="<?php echo $basicinfo->TIN; ?>"  class="form-control"/> 
-        <?php echo form_error('type_id_tin'); ?>
-    </div>
-</div>
-
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('certificate_of_incorpation'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
-        <input type="text" name="certificate_of_incorpation" value="<?php echo $basicinfo->incorporation_certificate; ?>"  class="form-control"/> 
-        <?php echo form_error('certificate_of_incorpation'); ?>
-    </div>
-</div>
-
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_doi'); ?>  : <span class="required">*</span></label>
-    <div class=" col-lg-6">
-        <div class="input-group date" id="datetimepicker3" >
-            <input type="text" name="doi" placeholder="<?php echo lang('hint_date'); ?>" value="<?php echo format_date($basicinfo->dob, false); ?>"  data-date-format="DD-MM-YYYY" class="form-control"/> 
-            <span class="input-group-addon">
-                <span class="fa fa-calendar "></span>
-            </span>
-        </div>
-        <?php echo form_error('doi'); ?>
-    </div>
-</div>
-<?php } ?>
 
 <?php if($basicinfo->category == "Individual"){ ?>
 <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_firstname'); ?>  : <span class="required">*</span></label>
@@ -146,27 +112,8 @@ if (isset($message) && !empty($message)) {
         <?php echo form_error('joindate'); ?>
     </div>
 </div>
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_type_id'); ?>  :</label>
-    <div class="col-lg-6">
-        <input type="text" name="type_id" value="<?php echo $basicinfo->type_id; ?>"  class="form-control"/> 
-        <?php echo form_error('type_id'); ?>
-    </div>
-</div>
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_type_id_number'); ?>  :</label>
-    <div class="col-lg-6">
-        <input type="text" name="type_id_number" value="<?php echo $basicinfo->type_id_number; ?>"  class="form-control"/> 
-        <?php echo form_error('type_id_number'); ?>
-    </div>
-</div>
 
-<div class="form-group"><label class="col-lg-3 control-label"><?php if($basicinfo->category == "Company"){ echo lang('institution_logo') ; } else { echo lang('member_photo'); } ?>  :  </label>
-    <div class="col-lg-6">
-        <input type="file" name="file"  class="form-control"> 
-        <?php if (isset($logo_error)) {
-            echo '<div class="error_message">' . $logo_error . '</div>';
-        } ?>
-    </div>
-</div>
+
 
 
 <div class="form-group">

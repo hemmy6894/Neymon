@@ -39,6 +39,14 @@ $activefunction = ($this->uri->segment(3)) ? $this->uri->segment(3) : 'X';
                             <?php if (has_role(1, 'View_member_group')) { ?>
                                 <li class="<?php echo ($activefunction == 'member_group_list' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/member/member_group_list'); ?>"><?php echo lang('member_group_list'); ?></a></li>
                             <?php } ?>
+                            <!--open-->
+                            <?php if (has_role(1, 'View_dhamana_group')) { ?>
+                                <li class="<?php echo ($activefunction == 'member_group_list' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/member/create_dhamana'); ?>"><?php echo lang('create_dhamana'); ?></a></li>
+                            <?php } ?>
+                            <?php if (has_role(1, 'View_company_group')) { ?>
+                                <li class="<?php echo ($activefunction == 'member_group_list' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/member/create_dhamana'); ?>"><?php echo lang('create_dhamana'); ?></a></li>
+                            <?php } ?>
+                            <!--closed-->
                         </ul>
                     </li>
                 <?php } ?>
@@ -48,22 +56,22 @@ $activefunction = ($this->uri->segment(3)) ? $this->uri->segment(3) : 'X';
                         <a href="#"><i class="fa fa-book"></i> <span class="nav-label"><?php echo lang('page_loan'); ?></span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <?php if (has_role(5, 'View_loan_list')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_viewlist' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_viewlist'); ?>"><?php echo lang('loan_viewlist').' ('.current_new_loan().')'; ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_viewlist' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_viewlist'); ?>"><?php echo lang('loan_viewlist').' ('.current_new_loan().')'; ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Create_new_loan')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_application' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_application'); ?>"><?php echo lang('loan_application'); ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_application' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_application'); ?>"><?php echo lang('loan_application'); ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Evaluate_loan')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_evaluation' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_evaluation'); ?>"><?php echo lang('loan_evaluation').' ('.current_loan_toevaluate().')'; ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_evaluation' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_evaluation'); ?>"><?php echo lang('loan_evaluation').' ('.current_loan_toevaluate().')'; ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Approve_loan')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_approval' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_approval'); ?>"><?php echo lang('loan_approval').' ('.current_loan_toapprove().')'; ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_approval' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_approval'); ?>"><?php echo lang('loan_approval').' ('.current_loan_toapprove().')'; ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Disburse_loan')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_disbursement' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_disbursement'); ?>"><?php echo lang('loan_disbursement').' ('.current_loan_todisburse().')'; ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_disbursement' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_disbursement'); ?>"><?php echo lang('loan_disbursement').' ('.current_loan_todisburse().')'; ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'Loan_repayment')) { ?>
-                                <li class="<?php echo ($activefunction == 'loan_repayment' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/loan_repayment'); ?>"><?php echo lang('loan_repayment'); ?></a></li>
+                                <li class="<?php echo ($activefunction == 'loan_repayment' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan_3/loan_repayment'); ?>"><?php echo lang('loan_repayment'); ?></a></li>
                             <?php } ?>
                             <?php if (has_role(5, 'automatic_repayment_process')) { ?>
                                 <!-- <li class="<?php echo ($activefunction == 'automatic_repayment_process' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/loan/automatic_repayment_process'); ?>"><?php echo 'Automatic Loan Repayment'; ?></a></li>-->
@@ -89,7 +97,7 @@ $activefunction = ($this->uri->segment(3)) ? $this->uri->segment(3) : 'X';
                             <?php } ?>
                             <?php if (has_role(6, 'Manage_supplier')) { ?>
                                 <li class="<?php echo ($activefunction == 'supplier_list' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/supplier/supplier_list'); ?>"><?php echo lang('supplier_list'); ?></a></li>
-                            <?php } ?> 
+                            <?php } ?>
                             <?php if (has_role(6, 'Create_purchase_orders')) { ?>
                                 <li class="<?php echo ($activefunction == 'supplier_purchase_order' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/supplier/supplier_purchase_order'); ?>"><?php echo lang('supplier_purchase_order'); ?></a></li>
                             <?php } ?>
@@ -178,8 +186,8 @@ $activefunction = ($this->uri->segment(3)) ? $this->uri->segment(3) : 'X';
                             <li class="<?php echo ($activefunction == 'import_loan' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/import/import_loan') ?>"><?php echo 'Import Loan Information'; ?></a></li>
                             <li class="<?php echo ($activefunction == 'import_repayment' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/import/import_repayment') ?>"><?php echo 'Import Loan Repayment Schedule'; ?></a></li>
                             <li class="<?php echo ($activefunction == 'import_repay_trans' ? 'active' : ''); ?>"><a href="<?php echo site_url(current_lang() . '/import/import_repay_trans') ?>"><?php echo 'Import Loan Repayment Transactions'; ?></a></li>
-                        
-                        
+
+
                     </ul>
                 </li>-->
 

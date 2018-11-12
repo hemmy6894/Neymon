@@ -19,6 +19,7 @@ $lang['loan_paysource'] = 'Means Of Payment';
 $lang['loan_purpose'] = 'Description';
 $lang['loan_addbtn'] = 'Create Loan';
 $lang['loan_LID'] = 'Loan Number';
+$lang['rate_unitoption'] = array( 10 => '10%', 15 => '15%',20 => '20%',25 => '25%');
 
 //loan validation
 $lang['loan_contribution_exceed_one_third'] = 'Total contribution and loan repayment exceed one third of your monthly income';

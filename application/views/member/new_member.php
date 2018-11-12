@@ -13,79 +13,84 @@ if (isset($message) && !empty($message)) {
     echo '<div class="label label-danger displaymessage">' . $this->session->flashdata('warning') . '</div>';
 }
 ?>
-<div class="form-group"  ><label class="col-lg-3 control-label"><?php echo lang('member_category'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
+<!--
+<div class="form-group"  ><label class="col-lg-3 control-label"><?php //echo lang('member_category'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-4">
         <select name="category" class="form-control" onchange="showDiv(this)">
-            <option value=""> <?php echo lang('select_default_text'); ?></option>
+            <option value=""> <?php// echo lang('select_default_text'); ?></option>
             <?php
-            $loop = lang('member_categoryoption');
+           // $loop = lang('member_categoryoption');
             //$selected = set_value('category');
-            $selected = "";
-            foreach ($loop as $key => $value) {
+           // $selected = "";
+           // foreach ($loop as $key => $value) {
                 ?>
-                <option <?php echo ($selected ? ($selected == $key ? 'selected="selected' : '') : ''); ?> value="<?php echo $key; ?>"> <?php echo $value; ?></option>
-            <?php }
+                <option <?php //echo ($selected ? ($selected == $key ? 'selected="selected' : '') : ''); ?> value="<?php //echo $key; ?>"> <?php //echo $value; ?></option>
+            <?php// }
             ?>
         </select>
-        <?php echo form_error('category'); ?>
+        <?php// echo form_error('category'); ?>
     </div>
 </div>
+-->
 
 <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_registration_fee'); ?>  : <span class="required"></span></label>
-    <div class="col-lg-6">
+    <div class="col-lg-4">
         <input type="text"  name="fee" value="<?php echo set_value('fee'); ?>"  class="form-control  amountformat"/> 
         <?php echo form_error('fee'); ?>
     </div>
 </div>
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_member_id'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
-        <input type="text" name="memberid" value="<?php echo set_value('memberid'); ?>"  class="form-control"/> 
-        <?php echo form_error('memberid'); ?>
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_photo'); ?>  :  </label>
+    <div class="col-lg-4">
+        <input type="file" name="file"  class="form-control"> 
+        <?php if (isset($logo_error)) {
+            echo '<div class="error_message">' . $logo_error . '</div>';
+        } ?>
+    </div>
+</div>
+<!--
+<div class="form-group" id="companyname" style="display:none" ><label class="col-lg-3 control-label"><?php //echo lang('companyname'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-4">
+        <input type="text" name="companyname" value="<?php// echo set_value('firstname'); ?>"  class="form-control"/> 
+        <?php //echo form_error('companyname'); ?>
     </div>
 </div>
 
-<div class="form-group" id="companyname" style="display:none" ><label class="col-lg-3 control-label"><?php echo lang('companyname'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
-        <input type="text" name="companyname" value="<?php echo set_value('firstname'); ?>"  class="form-control"/> 
-        <?php echo form_error('companyname'); ?>
+<div class="form-group" id="tin" style="display:none"><label class="col-lg-3 control-label"><?php //echo lang('member_type_id_tin'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-4">
+        <input type="text" name="type_id_tin" value="<?php// echo set_value('type_id_tin'); ?>"  class="form-control"/> 
+        <?php// echo form_error('type_id_tin'); ?>
     </div>
 </div>
 
-<div class="form-group" id="tin" style="display:none"><label class="col-lg-3 control-label"><?php echo lang('member_type_id_tin'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
-        <input type="text" name="type_id_tin" value="<?php echo set_value('type_id_tin'); ?>"  class="form-control"/> 
-        <?php echo form_error('type_id_tin'); ?>
+<div class="form-group" id="certificate_of_incorpation" style="display:none"><label class="col-lg-3 control-label"><?php //echo lang('certificate_of_incorpation'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-4">
+        <input type="text" name="certificate_of_incorpation" value="<?php// echo set_value('certificate_of_incorpation'); ?>"  class="form-control"/> 
+        <?php //echo form_error('certificate_of_incorpation'); ?>
     </div>
 </div>
-
-<div class="form-group" id="certificate_of_incorpation" style="display:none"><label class="col-lg-3 control-label"><?php echo lang('certificate_of_incorpation'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
-        <input type="text" name="certificate_of_incorpation" value="<?php echo set_value('certificate_of_incorpation'); ?>"  class="form-control"/> 
-        <?php echo form_error('certificate_of_incorpation'); ?>
-    </div>
-</div>
-
+-->
+<input type="hidden" id="category" name="category" value="Individual">
 <div class="form-group" id="firstname"><label class="col-lg-3 control-label"><?php echo lang('member_firstname'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
+    <div class="col-lg-4">
         <input type="text" name="firstname" value="<?php echo set_value('firstname'); ?>"  class="form-control"/> 
         <?php echo form_error('firstname'); ?>
     </div>
 </div>
 
 <div class="form-group" id="middlename"><label class="col-lg-3 control-label"><?php echo lang('member_middlename'); ?>  :</label>
-    <div class="col-lg-6">
+    <div class="col-lg-4">
         <input type="text" name="middlename" value="<?php echo set_value('middlename'); ?>"  class="form-control"/> 
         <?php echo form_error('middlename'); ?>
     </div>
 </div>
 <div class="form-group" id="lastname"><label class="col-lg-3 control-label"><?php echo lang('member_lastname'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
+    <div class="col-lg-4">
         <input type="text" name="lastname" value="<?php echo set_value('lastname'); ?>"  class="form-control"/> 
         <?php echo form_error('lastname'); ?>
     </div>
 </div>
 <div class="form-group" id="gender" ><label class="col-lg-3 control-label"><?php echo lang('member_gender'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
+    <div class="col-lg-4">
         <select name="gender" class="form-control">
             <option value=""> <?php echo lang('select_default_text'); ?></option>
             <?php
@@ -101,7 +106,7 @@ if (isset($message) && !empty($message)) {
     </div>
 </div>
 <div class="form-group" id="maritalstatus"><label class="col-lg-3 control-label"><?php echo lang('member_maritalstatus'); ?>  : <span class="required">*</span></label>
-    <div class="col-lg-6">
+    <div class="col-lg-4">
         <select name="maritalstatus" class="form-control">
             <option value=""> <?php echo lang('select_default_text'); ?></option>
             <?php
@@ -115,10 +120,51 @@ if (isset($message) && !empty($message)) {
         <?php echo form_error('maritalstatus'); ?>
     </div>
 </div>
+<div class="form-group" id="jobtitle"><label class="col-lg-3 control-label"><?php echo lang('member_jobtitle'); ?>  :</label>
+    <div class="col-lg-4">
+        <input type="text" name="jobtitle" value="<?php echo set_value('jobtitle'); ?>"  class="form-control"/> 
+        <?php echo form_error('jobtitle'); ?>
+    </div>
+</div>
 
 
+
+<div class="form-group" id="type_id"><label class="col-lg-3 control-label"><?php echo lang('member_type_id'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-4">
+        <select name="type_id" class="form-control">
+            <option value=""> <?php echo lang('select_default_text'); ?></option>
+            <?php
+            $loop = lang('member_idtype_option');
+            $selected = set_value('type_id');
+            foreach ($loop as $key => $value) {
+                ?>
+                <option <?php echo ($selected ? ($selected == $key ? 'selected="selected' : '') : ''); ?> value="<?php echo $key; ?>"> <?php echo $value; ?></option>
+            <?php } ?>
+        </select>
+        <?php echo form_error('type_id'); ?>
+    </div>
+</div>
+<div class="form-group" id="id_name_issue"><label class="col-lg-3 control-label"><?php echo lang('member_type_name_issue'); ?>  :<span class="required">*</span></label>
+    <div class="col-lg-4">
+        <input type="text" name="id_name_issue" value="<?php echo set_value('id_name_issue'); ?>"  class="form-control"/> 
+        <?php echo form_error('id_name_issue'); ?>
+    </div>
+</div>
+<div class="form-group" id="id_place_issue"><label class="col-lg-3 control-label"><?php echo lang('member_type_place_issue'); ?>  :<span class="required">*</span></label>
+    <div class="col-lg-4">
+        <input type="text" name="id_place_issue" value="<?php echo set_value('id_place_issue'); ?>"  class="form-control"/> 
+        <?php echo form_error('id_place_issue'); ?>
+    </div>
+</div>
+<div class="form-group" id="memberid_type"><label class="col-lg-3 control-label"><?php echo lang('member_type_id_number'); ?>  :<span class="required">*</span></label>
+    <div class="col-lg-4">
+        <input type="text" name="memberid_type" value="<?php echo set_value('memberid_type'); ?>"  class="form-control"/> 
+    
+        <?php echo form_error('memberid_type'); ?>
+    </div>
+</div>
 <div class="form-group" id="dob"><label class="col-lg-3 control-label"><?php echo lang('member_dob'); ?>  : <span class="required">*</span></label>
-    <div class=" col-lg-6">
+    <div class=" col-lg-4">
         <div class="input-group date" id="datetimepicker" >
             <input type="text" name="dob" placeholder="<?php echo lang('hint_date'); ?>" value="<?php echo set_value('dob'); ?>"  data-date-format="DD-MM-YYYY" class="form-control"/> 
             <span class="input-group-addon">
@@ -130,7 +176,7 @@ if (isset($message) && !empty($message)) {
 </div>
 
 <div class="form-group" id="doi" style="display:none"><label class="col-lg-3 control-label"><?php echo lang('member_doi'); ?>  : <span class="required">*</span></label>
-    <div class=" col-lg-6">
+    <div class=" col-lg-4">
         <div class="input-group date" id="datetimepicker3" >
             <input type="text" name="doi" placeholder="<?php echo lang('hint_date'); ?>" value="<?php echo set_value('doi'); ?>"  data-date-format="DD-MM-YYYY" class="form-control"/> 
             <span class="input-group-addon">
@@ -143,7 +189,7 @@ if (isset($message) && !empty($message)) {
 
 
 <div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_join_date'); ?>  : <span class="required">*</span></label>
-    <div class=" col-lg-6">
+    <div class=" col-lg-4">
         <div class="input-group date" id="datetimepicker2" >
             <input type="text" name="joindate" placeholder="<?php echo lang('hint_date'); ?>" value="<?php echo set_value('joindate'); ?>"  data-date-format="DD-MM-YYYY" class="form-control"/> 
             <span class="input-group-addon">
@@ -153,31 +199,25 @@ if (isset($message) && !empty($message)) {
         <?php echo form_error('joindate'); ?>
     </div>
 </div>
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_type_id'); ?>  :</label>
-    <div class="col-lg-6">
-        <input type="text" name="type_id" value="<?php echo set_value('type_id'); ?>"  class="form-control"/> 
-        <?php echo form_error('type_id'); ?>
-    </div>
-</div>
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_type_id_number'); ?>  :</label>
-    <div class="col-lg-6">
-        <input type="text" name="type_id_number" value="<?php echo set_value('type_id_number'); ?>"  class="form-control"/> 
-        <?php echo form_error('type_id_number'); ?>
+<div class="form-group" id="memberid_month_salary"><label class="col-lg-3 control-label"><?php echo lang('member_month_salary'); ?>  : <span class="required">*</span></label>
+    <div class="col-lg-4">
+        <input type="text" name="memberid_month_salary" value="<?php echo set_value('memberid_month_salary'); ?>"  class="form-control"/> 
+        <?php echo form_error('memberid_month_salary'); ?>
     </div>
 </div>
 
-<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_photo'); ?>  :  </label>
-    <div class="col-lg-6">
-        <input type="file" name="file"  class="form-control"> 
+<div class="form-group"><label class="col-lg-3 control-label"><?php echo lang('member_salary'); ?>  :  </label>
+    <div class="col-lg-4">
+        <input type="file" name="file_salary"  class="form-control"> 
         <?php if (isset($logo_error)) {
-            echo '<div class="error_message">' . $logo_error . '</div>';
+            echo '<div class="error_message">' . $logo_error_salary . '</div>';
         } ?>
     </div>
 </div>
 
 <div class="form-group">
     <label class="col-lg-3 control-label">&nbsp;</label>
-    <div class="col-lg-6">
+    <div class="col-lg-4">
         <input class="btn btn-primary" value="<?php echo lang('member_addbtn'); ?>" type="submit"/>
     </div>
 </div>
@@ -206,6 +246,7 @@ if (isset($message) && !empty($message)) {
                                document.getElementById('firstname').style.display = "block";
                                document.getElementById('lastname').style.display = "block";
                                document.getElementById('middlename').style.display = "block";
+                               document.getElementById('jobtitle').style.display="block";
                                document.getElementById('gender').style.display = "block";
                                document.getElementById('maritalstatus').style.display = "block";
                                document.getElementById('dob').style.display = "block";
@@ -218,6 +259,7 @@ if (isset($message) && !empty($message)) {
                                document.getElementById('firstname').style.display = "none";
                                document.getElementById('lastname').style.display = "none";
                                document.getElementById('middlename').style.display = "none";
+                               document.getElementById('jobtitle').style.display="block";
                                document.getElementById('gender').style.display = "none";
                                document.getElementById('maritalstatus').style.display = "none";
                                document.getElementById('dob').style.display = "none";
